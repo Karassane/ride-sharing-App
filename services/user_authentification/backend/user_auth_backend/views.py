@@ -5,6 +5,7 @@ from django.http import (
 from django.views.decorators.csrf import (
     csrf_exempt,
 )  # Décorateur pour désactiver la protection CSRF pour cette vue (l'API).
+from django.contrib.auth import authenticate
 
 
 @csrf_exempt  # Ce décorateur est utilisé pour désactiver la protection CSRF sur cette vue, car elle est utilisée pour une API.
@@ -45,4 +46,36 @@ def signup_view(request):
             )  # Réponse d'erreur si le JSON est invalide.
 
     # Si la méthode HTTP n'est pas POST, renvoie une erreur (par exemple si un GET est effectué sur cette route).
+    return JsonResponse({"error": "Invalid request method"}, status=405)
+
+
+@csrf_exempt
+def login_view(request):
+    if request.method == "POST":
+        try:
+            # Charger les données JSON envoyées depuis le frontend
+            data = json.loads(request.body)
+            email = data.get("email")
+            password = data.get("password")
+
+            # Vérifier que les champs ne sont pas vides
+            if not email or not password:
+                print("Email and password are required.")
+                return JsonResponse(
+                    {"error": "Email and password are required."}, status=400
+                )
+
+            # Simuler l'authentification : vérifier si l'email et le mot de passe sont corrects
+            if email == "fares.djelili@outlook.fr" and password == "1234":
+                # Authentification réussie
+                print("Login successful!")
+                return JsonResponse({"message": "Login successful!"}, status=200)
+            else:
+                # Authentification échouée
+                print("Invalid email or password.")
+                return JsonResponse({"error": "Invalid email or password."}, status=400)
+
+        except ValueError:
+            return JsonResponse({"error": "Invalid JSON."}, status=400)
+
     return JsonResponse({"error": "Invalid request method"}, status=405)

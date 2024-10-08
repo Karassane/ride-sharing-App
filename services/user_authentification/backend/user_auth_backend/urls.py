@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
-from .views import signup_view
+from .views import signup_view, login_view
 
 
 # Simple vue pour la page d'accueil.
@@ -14,4 +14,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),  # URL pour accéder à l'interface admin.
     path("", home_view),  # URL pour la page d'accueil de l'API.
     path("signup/", signup_view, name="signup"),  # URL pour le endpoint d'inscription.
+    path("login/", login_view, name="login"),  # Route pour la connexion
 ]
