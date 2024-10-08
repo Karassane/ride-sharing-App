@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application User Authentification</title>
+    <!-- Inclure le favicon -->
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon" />
+    <style>
+      /* Style pour centrer l'image et le titre */
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 3rem; /* Taille du texte du titre */
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Titre ajouté ici -->
+    <h1>Bienvenue dans le service User Authentification</h1>
+
+    <!-- Affichage du favicon en tant qu'image au centre de la page -->
+    <img src="{% static 'favicon.png' %}" alt="BEST" />
+
+    {% block content %}{% endblock %}
+  </body>
+</html>

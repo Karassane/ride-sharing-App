@@ -18,6 +18,13 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+
+  /* Ajout d'une image de fond */
+  background-image: url("/images/cover.jpg"); /* Chemin relatif de mon image */
+  background-size: cover; /* L'image couvre toute la page */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat; /* Évite la répétition de l'image */
+  background-attachment: fixed; /* L'image reste en place quand on défile la page */
 }
 
 @layer utilities {

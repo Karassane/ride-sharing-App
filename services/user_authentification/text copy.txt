@@ -1,0 +1,353 @@
+===> Voici mon code SignupForm.json :
+
+"use client"; // Indique que ce composant est un Client Component
+
+import { useState } from "react";
+import axios from "axios";
+
+export default function Signup() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirm, setPasswordConfirm] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://127.0.0.1:8000/signup/", {
+        name,
+        email,
+        password,
+        password_confirm: passwordConfirm,
+      });
+      console.log("Account created:", response.data);
+      alert("Account created successfully!");
+    } catch (error) {
+      console.error("There was an error creating the account:", error);
+      alert("There was an error creating your account.");
+    }
+  };
+
+  return (
+    <div
+      className="h-screen overflow-hidden flex items-center justify-center"
+      style={{ background: "#edf2f7" }}
+    >
+      <div className="flex flex-col min-h-screen">
+        <div className="container flex-1 flex flex-col items-center max-w-lg mx-auto px-4 py-28">
+          <div
+            className="flex flex-col p-6 rounded-2xl shadow-md shadow-white"
+            style={{
+              backgroundImage:
+                "url('https://img.freepik.com/free-photo/starry-night-sky_1048-11828.jpg')",
+            }}
+          >
+            <h1 className="text-center text-5xl mb-6 text-neutral-200">
+              Sign Up
+            </h1>
+
+            <input
+              id="name"
+              type="text"
+              className="w-auto mb-8 mt-6 mx-8 rounded-lg focus:text-gray-200 placeholder-gray-200 border-gray-200 border-t-transparent bg-transparent focus:outline-none focus:ring-transparent focus:border-gray-200 focus:placeholder-transparent focus:text-gray-200"
+              placeholder="Name"
+            />
+
+            <input
+              id="email"
+              type="email"
+              className="w-auto mb-8 mt-6 mx-8 rounded-lg shadow-none text-gray-200 placeholder-gray-200 border-gray-200 border-t-transparent bg-transparent focus:outline-none focus:ring-transparent focus:border-gray-200 focus:placeholder-transparent focus:text-gray-200"
+              placeholder="Email"
+            />
+
+            <input
+              id="password"
+              type="password"
+              className="text-gray-200 w-auto mb-8 mt-6 mx-8 rounded-lg bg-transparent border-gray-200 border-t-transparent placeholder-gray-200 focus:outline-none focus:ring-transparent focus:border-gray-200 focus:placeholder-transparent focus:text-gray-200"
+              placeholder="Password"
+            />
+
+            <input
+              id="password_confirm"
+              type="password"
+              className="w-auto mb-8 mt-6 mx-8 rounded-lg text-gray-200 placeholder-gray-200 border-gray-200 border-t-transparent bg-transparent focus:outline-none focus:ring-transparent focus:border-gray-200 focus:placeholder-transparent focus:text-gray-200"
+              placeholder="Confirm Password"
+            />
+
+            <button className="relative inline-flex items-center justify-center p-0.5 mb-8 mt-6 mx-8 overflow-hidden text-sm font-medium text-neutral-200 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:outline-none dark:focus:ring-blue-800">
+              <span className="relative text-lg w-full px-5 py-2.5 transition-all ease-in duration-75 bg-black dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Create Account
+              </span>
+            </button>
+
+            {/* Social buttons */}
+            <div className="inline-flex items-center justify-center w-full">
+              <hr className="w-64 h-px my-8 bg-neutral-200 border-0 white" />
+              <span className="absolute px-3 font-medium text-neutral-200 -translate-x-1/2 left-1/2 bg-black">
+                or
+              </span>
+            </div>
+
+            <button
+              type="button"
+              className="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2"
+            >
+              Sign up with Facebook
+            </button>
+
+            <button
+              type="button"
+              className="text-black bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2"
+            >
+              Sign up with 𝕏
+            </button>
+
+            <button
+              type="button"
+              className="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2"
+            >
+              Sign up with Github
+            </button>
+
+            <button
+              type="button"
+              className="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2"
+            >
+              Sign up with Google
+            </button>
+
+            <button
+              type="button"
+              className="text-white bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 mr-2 mb-2"
+            >
+              Sign up with Apple
+            </button>
+
+            <div className="text-center text-sm text-neutral-200 mt-4">
+              By signing up, you agree to the
+              <a
+                className="no-underline border-b border-grey-dark text-neutral-200"
+                href="#"
+              >
+                Terms of Service
+              </a>
+              and
+              <a
+                className="no-underline border-b border-grey-dark text-neutral-200"
+                href="#"
+              >
+                Privacy Policy
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+====> Voici mon code views.py :
+
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+
+
+@csrf_exempt
+def signup_view(request):
+    if request.method == "POST":
+        # Traiter les données du formulaire ici
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+        password_confirm = request.POST.get("password_confirm")
+
+        # Ajouter la logique de création d'utilisateur ici
+        # Par exemple, valider les mots de passe et créer l'utilisateur
+
+        return JsonResponse({"message": "Account created successfully!"}, status=201)
+
+    # Si la méthode est autre que POST, retourner une erreur
+    return JsonResponse({"error": "Invalid request method"}, status=405)
+
+
+===> Voici mon code urls.py :
+
+from django.contrib import admin
+from django.urls import path
+from django.http import HttpResponse
+from .views import signup_view
+
+
+# Vue pour la page d'accueil
+def home_view(request):
+    return HttpResponse("Bienvenue sur l'API de gestion des utilisateurs")
+
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("", home_view),  # Route pour la page d'accueil
+    path("signup/", signup_view, name="signup"),  # Route pour le signup
+]
+
+
+===> Voici mon code settings.py : 
+
+"""
+Django settings for user_auth_backend project.
+
+Generated by 'django-admin startproject' using Django 5.1.1.
+
+For more information on this file, see
+https://docs.djangoproject.com/en/5.1/topics/settings/
+
+For the full list of settings and their values, see
+https://docs.djangoproject.com/en/5.1/ref/settings/
+"""
+
+from pathlib import Path
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Chemin pour les fichiers statiques
+STATIC_URL = "/static/"
+
+# Répertoire de fichiers statiques
+STATICFILES_DIRS = [Path(BASE_DIR, "static")]
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = "django-insecure-chgc6=_(8puwtt9cx(x%hgtxk68tgr&r6)-33%vo#s656=g7zf"
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = []
+
+# Application definition
+
+INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "rest_framework",  # Ajouté pour Django Rest Framework
+    "corsheaders",  # Ajouté pour gérer les permissions CORS
+]
+
+MIDDLEWARE = [
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "corsheaders.middleware.CorsMiddleware",  # Ajouté pour CORS
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+]
+
+ROOT_URLCONF = "user_auth_backend.urls"
+
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [
+            BASE_DIR / "user_auth_backend" / "templates"
+        ],  # Ajout du chemin vers les templates
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+            ],
+        },
+    },
+]
+
+WSGI_APPLICATION = "user_auth_backend.wsgi.application"
+
+# Database
+# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+}
+
+# Password validation
+# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
+
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+    },
+]
+
+# Internationalization
+# https://docs.djangoproject.com/en/5.1/topics/i18n/
+
+LANGUAGE_CODE = "en-us"
+
+TIME_ZONE = "UTC"
+
+USE_I18N = True
+
+USE_TZ = True
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/5.1/howto/static-files/
+
+STATIC_URL = "static/"
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# CORS settings
+# CORS_ALLOW_ALL_ORIGINS permet à toutes les origines d'accéder à l'API
+CORS_ALLOW_ALL_ORIGINS = True  # Tu peux restreindre cela si nécessaire
+
+# REST Framework configuration (ajoutée pour l'API)
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
+    ]
+}
+
+
+===> J'ai ça : 
+
+(user_auth_env) djelili@djelili-fares:~/Desktop/APP_WS/ride-sharing-App/services/user_authentification/backend$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 07, 2024 - 16:44:41
+Django version 5.1.1, using settings 'user_auth_backend.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+[07/Oct/2024 16:44:43] "GET / HTTP/1.1" 200 47
+[07/Oct/2024 16:44:47] "GET /admin/ HTTP/1.1" 302 0
+[07/Oct/2024 16:44:47] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4160
+Method Not Allowed: /signup/
+[07/Oct/2024 16:44:53] "GET /signup/ HTTP/1.1" 405 35

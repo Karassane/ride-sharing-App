@@ -1,0 +1,14 @@
+/* src/app/login/login.css */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(245, 2, 2, 0.918);
+}
+
+h1 {
+  text-align: center;
+  color: #0070f3;
+}
