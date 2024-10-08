@@ -6,6 +6,7 @@ from django.views.decorators.csrf import (
     csrf_exempt,
 )  # Décorateur pour désactiver la protection CSRF pour cette vue (l'API).
 from django.contrib.auth import authenticate
+from django.http import HttpResponse
 
 
 @csrf_exempt  # Ce décorateur est utilisé pour désactiver la protection CSRF sur cette vue, car elle est utilisée pour une API.
@@ -73,9 +74,14 @@ def login_view(request):
             else:
                 # Authentification échouée
                 print("Invalid email or password.")
-                return JsonResponse({"error": "Invalid email or password."}, status=400)
+                return JsonResponse(
+                    {"error": "I    nvalid email or password."}, status=400
+                )
 
         except ValueError:
             return JsonResponse({"error": "Invalid JSON."}, status=400)
+
+    elif request.method == "GET":
+        return HttpResponse("<h1>Formulaire d'inscription (à implémenter)</h1>")
 
     return JsonResponse({"error": "Invalid request method"}, status=405)

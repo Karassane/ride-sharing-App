@@ -108,10 +108,10 @@ export default function Login() {
         }
       );
       console.log("Login successful:", response.data);
-      alert("Login successful!");
+      // alert("Login => OK!");
     } catch (error) {
       console.error("Error during login:", error);
-      alert("Invalid email or password.");
+      // alert("Invalid email or password.");
     }
   };
 
