@@ -38,7 +38,9 @@ export default function Nav() {
           </ul>
         </li>
       ))}
-
+      <li>
+        <Link href="http://localhost:3001/">Nedam Drive</Link>
+      </li>
       <li>
         <Link href="/contact">Contact</Link>
       </li>
