@@ -41,6 +41,7 @@ export default function Header1() {
                 />
               </Link>
             </div>
+
             <div className="header-nav">
               <nav className="nav-main-menu d-none d-xl-block">
                 <ul className="main-menu">
@@ -52,6 +53,7 @@ export default function Header1() {
                 <span className="burger-icon-bottom"></span>
               </div>
             </div>
+
             <div className="header-right">
               <div className="d-none d-xxl-inline-block align-middle mr-10">
                 <a

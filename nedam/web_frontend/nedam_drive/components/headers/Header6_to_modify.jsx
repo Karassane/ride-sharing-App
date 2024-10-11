@@ -7,7 +7,7 @@ import Language from "./components/Language";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaSearch, FaPlusCircle, FaUserCircle } from "react-icons/fa"; // Importer l'icône de l'utilisateur
 
-export default function Header4() {
+export default function Header6() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -21,37 +21,24 @@ export default function Header4() {
 
     window.addEventListener("scroll", handleScroll);
 
+    // Clean up the event listener when component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
   return (
-    <header
-      className={`header header-white header-bg-2 sticky-bar ${
-        scrolled ? "stick" : ""
-      }`}
-      style={{
-        backgroundColor: "transparent",
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 1000,
-      }} // Make background transparent and position fixed
-    >
-      <div className="container-fluid box-header-home4">
+    <header className={`header sticky-bar ${scrolled ? "stick" : ""}`}>
+      <div className="container-fluid">
         <div className="main-header">
-          {/* Cette partie concerne les éléments du header (main-header qui contient header-left et ce dernier contient header-logo + header-nav + header-right) */}
           <div className="header-left">
-            {/* Cette partie concerne le logo dans le header */}
             <div className="header-logo">
               <Link className="d-flex" href="/">
                 <Image
                   width={150}
                   height={50}
-                  alt="Luxride"
-                  src="/assets/imgs/template/logo-black.svg"
+                  alt="luxride"
+                  src="/assets/imgs/template/logo.svg"
+                  style={{ height: "fit-content" }}
                 />
               </Link>
             </div>

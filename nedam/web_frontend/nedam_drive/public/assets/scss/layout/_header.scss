@@ -137,7 +137,7 @@
         &:hover {
           color: $color-white;
           border-radius: 40px;
-          background-color: #ffffff2d;
+          background-color: #bbbec42d;
           i {
             opacity: 1;
             transition: 0.2s;
@@ -842,6 +842,6 @@
 }
 
 .header-nav .main-menu li a {
-  font-size: 1.2em; /* Ajuste selon la taille que tu désires */
+  font-size: 1.2em; /* Ajuste selon la taille désirée */
   font-weight: bold; /* Optionnel : mettre en gras */
 }
