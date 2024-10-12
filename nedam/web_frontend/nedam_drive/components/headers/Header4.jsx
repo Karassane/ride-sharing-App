@@ -29,7 +29,7 @@ export default function Header4() {
   }, []);
   return (
     <header
-      className={`header header-white header-bg-2 sticky-bar ${
+      className={`header header-white header-bg-2 sticky-bar header4-custom ${
         scrolled ? "stick" : ""
       }`}
     >

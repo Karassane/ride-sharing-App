@@ -52,6 +52,9 @@
         width: 55%;
         text-align: left;
         padding-left: 45px;
+        .main-menu li a {
+          font-weight: bold;
+        }
       }
       .header-right {
         width: 45%;
@@ -734,5 +737,18 @@
   }
   .main-menu > li {
     padding: 13px 0px 13px 0px;
+  }
+}
+
+.header4-custom {
+  // Tes personnalisations spécifiques
+
+  .header-nav {
+    // Applique la propriété font-weight: bold pour mettre les éléments en gras
+    font-weight: bold;
+
+    .main-menu li a {
+      font-weight: bold; // Cible les liens dans le menu
+    }
   }
 }
