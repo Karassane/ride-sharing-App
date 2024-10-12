@@ -728,6 +728,7 @@
     }
   }
 }
+
 .header-homepage5 {
   background-color: transparent;
   position: absolute;
@@ -738,8 +739,25 @@
   .main-menu > li {
     padding: 13px 0px 13px 0px;
   }
+  
 }
-
+/*
+.header-homepage5 {
+  background-color: transparent;
+  position: absolute;
+  z-index: 1234;
+  .main-header .header-left .header-nav {
+    font-weight: normal;
+    .main-menu li a {
+      font-weight: normal;
+    }
+  }
+  .main-menu > li {
+    padding: 13px 0px 13px 0px;
+  }
+  
+}
+*/
 .header4-custom {
   .header-nav {
     font-weight: bold;
@@ -748,3 +766,5 @@
     }
   }
 }
+
+
