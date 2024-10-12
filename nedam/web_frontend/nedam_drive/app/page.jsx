@@ -1,5 +1,5 @@
 import Footer1 from "@/components/footers/Footer1";
-import Header1 from "@/components/headers/Header1";
+import Header1 from "@/components/headers/Header4";
 import MobailHeader1 from "@/components/headers/MobailHeader1";
 import Blogs from "@/components/homes/common/blogs/Blogs2";
 import Cta from "@/components/homes/common/cta/Cta";
