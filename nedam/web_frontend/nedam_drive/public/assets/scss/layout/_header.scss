@@ -1,3 +1,7 @@
+//*****************************
+// Général
+//*****************************
+
 .box-container-sw {
   max-width: 700px;
   margin: auto;
@@ -6,6 +10,11 @@
   line-height: 18px;
   padding: 10px 0px;
 }
+
+//*****************************
+// Sections du footer (appels, adresse, etc.)
+//*****************************
+
 .call-phone {
   background: url(/assets/imgs/template/icons/call.svg) no-repeat left top 1px;
   padding-left: 22px;
@@ -19,6 +28,11 @@
   background: url(/assets/imgs/page/homepage3/time.png) no-repeat left top 1px;
   padding-left: 30px;
 }
+
+//*****************************
+// Header principal
+//*****************************
+
 .header {
   padding: 0px 0;
   float: left;
@@ -33,6 +47,7 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
+
     .header-left {
       display: flex;
       align-items: center;
@@ -40,6 +55,7 @@
       .header-logo {
         max-width: 150px;
         width: 100%;
+        margin-left: 2vw;
         a {
           display: block;
           img {
@@ -54,7 +70,8 @@
         padding-left: 45px;
       }
       .header-right {
-        width: 45%;
+        width: 35%;
+        margin-right: 2vw;
         text-align: right;
         .icon-list {
           display: inline-block;
@@ -79,6 +96,11 @@
       }
     }
   }
+
+  //*****************************
+  // Menu principal
+  //*****************************
+
   .nav-main-menu {
     width: auto;
     padding: 0px 0px 0px 10px;
@@ -134,7 +156,7 @@
         &:hover {
           color: $color-white;
           border-radius: 40px;
-          background-color: #ffffff2d;
+          background-color: #bbbec42d;
           i {
             opacity: 1;
             transition: 0.2s;
@@ -427,7 +449,7 @@
     background-color: $background-white;
   }
   &.header-bg-2 {
-    background-color: $background-bg-2;
+    background-color: transparent !important; /*$background-bg-2;*/
   }
 }
 
@@ -725,6 +747,7 @@
     }
   }
 }
+
 .header-homepage5 {
   background-color: transparent;
   position: absolute;
@@ -735,4 +758,109 @@
   .main-menu > li {
     padding: 13px 0px 13px 0px;
   }
+}
+
+//###################
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  /* Icônes des liens de recherche et publication */
+  .custom-icon {
+    font-size: 1.5em; /* Taille des icônes */
+    color: #cc3508; /* Couleur orange pour les icônes */
+    font-weight: normal; /* Assure que les icônes ne soient pas en gras */
+    margin-right: 8px; /* Ajoute un espacement entre l'icône et le texte */
+
+    &:hover {
+      color: #000000; /* Change la couleur de l'icône au survol */
+      transition: color 0.3s ease; /* Transition douce pour le changement de couleur */
+    }
+  }
+
+  /* Liens avec les icônes */
+  .custom-link {
+    color: #000000; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprime la surbrillance sous les liens */
+    font-weight: bold; /* Texte en gras */
+
+    &:hover {
+      color: #cc3508; /* Change la couleur du texte au survol */
+      transition: color 0.3s ease; /* Transition douce pour le changement de couleur */
+    }
+  }
+
+  /* Menu déroulant */
+  .dropdown-toggle {
+    background-color: transparent; /* Retire le fond du bouton */
+    border: none; /* Retire la bordure par défaut du bouton */
+    padding: 0;
+    outline: none;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: transparent !important; /* Pas de changement de fond au survol */
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    /* Désactiver complètement l'effet de survol sur le bouton */
+    &:hover {
+      background-color: transparent; /* Pas de changement de fond */
+      box-shadow: none; /* Aucune ombre au survol */
+    }
+
+    svg {
+      color: #cc3508; /* Couleur orange de l'icône du menu */
+      font-size: 9em; /* Taille de l'icône */
+      margin-right: 3px; /* Espacement entre l'icône et la flèche */
+
+      /* Désactiver l'effet de survol pour l'icône */
+      &:hover {
+        color: #cc3508; /* Assure que la couleur ne change pas au survol */
+      }
+    }
+
+    /* Style pour la petite flèche */
+    &::after {
+      content: ""; /* Assure que la flèche est visible */
+      border: solid #000000; /* Couleur noire pour la flèche */
+      border-width: 0 2px 2px 0; /* Forme de la flèche */
+      display: inline-block;
+      padding: 4px;
+      transform: rotate(45deg); /* Angle de la flèche */
+      margin-left: 5px; /* Espacement entre l'icône et la flèche */
+    }
+  }
+
+  /* Menu déroulant */
+  .dropdown-menu {
+    border-radius: 8px; /* Bordures arrondies du menu */
+    border: 1px solid #eaeaea;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de flottement */
+    min-width: 200px;
+    padding: 10px;
+
+    .dropdown-item {
+      padding: 8px 15px;
+      font-size: 14px;
+      color: #333;
+      font-weight: 500;
+
+      &:hover {
+        background-color: #f1f1f1; /* Change la couleur de fond au survol */
+        color: #007bff; /* Change la couleur du texte au survol */
+      }
+    }
+  }
+}
+
+.header-nav .main-menu li a {
+  font-size: 1.2em; /* Ajuste selon la taille désirée */
+  font-weight: bold; /* Optionnel : mettre en gras */
 }
