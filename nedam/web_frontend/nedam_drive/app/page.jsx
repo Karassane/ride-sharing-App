@@ -1,27 +1,44 @@
-import Footer4 from "@/components/footers/Footer4";
-import Header4 from "@/components/headers/Header4";
-import Feet from "@/components/homes/home-4/Feet";
-import Hero from "@/components/homes/home-11/Hero";
-import Service from "@/components/homes/home-4/Service";
-import Steps from "@/components/homes/home-3/Proces2";
+import Footer1 from "@/components/footers/Footer1";
+import Header1 from "@/components/headers/Header1";
 import MobailHeader1 from "@/components/headers/MobailHeader1";
+import Blogs from "@/components/homes/common/blogs/Blogs2";
+import Cta from "@/components/homes/common/cta/Cta";
 
+import Facts from "@/components/common/facts/Facts";
+import Faq from "@/components/homes/home-1/Faq";
+import Features from "@/components/common/features/Features";
+import Feet from "@/components/homes/home-1/Feet";
+import Hero from "@/components/homes/home-1/Hero";
+import Partners from "@/components/common/partners/Partners";
+import Process from "@/components/common/process/Process";
+import Service from "@/components/homes/home-1/Service";
+import Testimonials from "@/components/common/testimonials/Testimonials2";
+import DownloadApp from "@/components/common/downloadApp/DownloadApp";
 export const metadata = {
-  title: "Nedam Drive - Home",
-  description: "Nedam Drive Service",
+  title:
+    "Home 1 || Lixride Chauffeur Limousine Transport and Car Hire Nextjs Template",
+  description:
+    "Lixride Chauffeur Limousine Transport and Car Hire Nextjs Template",
 };
-
-export default function page() {
+export default function Home() {
   return (
     <>
-      <Header4 /> <MobailHeader1 />
+      <Header1 /> <MobailHeader1 />
       <main className="main">
         <Hero />
-        <Steps />
-        <Service />
+        <Partners />
         <Feet />
+        <Process />
+        <Features />
+        <Facts />
+        <Service />
+        <Testimonials />
+        <Cta />
+        <Blogs />
+        <Faq />
+        <DownloadApp />
       </main>
-      <Footer4 />
+      <Footer1 />
     </>
   );
 }
