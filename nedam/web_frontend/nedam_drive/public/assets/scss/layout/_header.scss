@@ -741,14 +741,10 @@
 }
 
 .header4-custom {
-  // Tes personnalisations spécifiques
-
   .header-nav {
-    // Applique la propriété font-weight: bold pour mettre les éléments en gras
     font-weight: bold;
-
     .main-menu li a {
-      font-weight: bold; // Cible les liens dans le menu
+      font-weight: bold;
     }
   }
 }
