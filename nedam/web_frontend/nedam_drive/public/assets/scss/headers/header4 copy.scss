@@ -1,3 +1,5 @@
+@import "../abstracts/variables", "../abstracts/functions";
+
 //*****************************
 // Général
 //*****************************
@@ -854,7 +856,7 @@
 
       &:hover {
         background-color: #f1f1f1; /* Change la couleur de fond au survol */
-        color: #007bff; /* Change la couleur du texte au survol */
+        color: #ff0000; /* Change la couleur du texte au survol */
       }
     }
   }

@@ -5,7 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Language from "./components/Language";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FaSearch, FaPlusCircle, FaUserCircle } from "react-icons/fa"; // Importer l'icône de l'utilisateur
+import { FaSearch, FaPlusCircle, FaUserCircle } from "react-icons/fa";
+// import "../../public/assets/scss/headers/header4.scss";
 
 export default function Header4() {
   const [scrolled, setScrolled] = useState(false);
@@ -38,13 +39,11 @@ export default function Header4() {
         left: 0,
         right: 0,
         zIndex: 1000,
-      }} // Make background transparent and position fixed
+      }}
     >
       <div className="container-fluid box-header-home4">
         <div className="main-header">
-          {/* Cette partie concerne les éléments du header (main-header qui contient header-left et ce dernier contient header-logo + header-nav + header-right) */}
           <div className="header-left">
-            {/* Cette partie concerne le logo dans le header */}
             <div className="header-logo">
               <Link className="d-flex" href="/">
                 <Image
@@ -56,7 +55,6 @@ export default function Header4() {
               </Link>
             </div>
 
-            {/* Cette partie concerne les éléments du menu droite du header */}
             <div className="header-nav">
               <nav className="nav-main-menu d-none d-xl-block">
                 <ul className="main-menu">
@@ -69,9 +67,7 @@ export default function Header4() {
               </div>
             </div>
 
-            {/* Cette partie concerne les éléments du menu gauche du header */}
             <div className="header-right d-flex align-items-center justify-content-end">
-              {/* Ajouter les deux nouveaux éléments */}
               <div className="d-inline-block mr-4">
                 <Link
                   href="/search_traject"
@@ -81,6 +77,7 @@ export default function Header4() {
                   <span className="custom-text">Rechercher un trajet</span>
                 </Link>
               </div>
+
               <div
                 className="d-inline-block"
                 style={{ marginLeft: "20px", marginRight: "40px" }}
@@ -94,12 +91,10 @@ export default function Header4() {
                 </Link>
               </div>
 
-              {/* Langue et connexion */}
               <div className="d-none d-xxl-inline-block box-dropdown-cart align-middle mr-10">
                 <Language />
               </div>
 
-              {/* Menu utilisateur avec avatar */}
               <div className="dropdown d-inline-block">
                 <button
                   className="btn btn-secondary dropdown-toggle"

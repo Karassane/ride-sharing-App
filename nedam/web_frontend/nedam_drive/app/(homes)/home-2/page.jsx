@@ -1,5 +1,5 @@
 import Footer2 from "@/components/footers/Footer2";
-import Header2 from "@/components/headers/Header5";
+import Header2 from "@/components/headers/Header2";
 
 import Blogs from "@/components/homes/common/blogs/Blogs";
 import DownloadApp from "@/components/homes/home-2/DownloadApp";
