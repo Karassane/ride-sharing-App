@@ -52,6 +52,9 @@
         width: 55%;
         text-align: left;
         padding-left: 45px;
+        // .main-menu li a {
+        //   font-weight: bold;
+        // }
       }
       .header-right {
         width: 45%;
@@ -725,6 +728,7 @@
     }
   }
 }
+
 .header-homepage5 {
   background-color: transparent;
   position: absolute;
@@ -738,109 +742,10 @@
 }
 
 .header4-custom {
-  //*****************************
-  // header-left (inclut le logo)
-  //*****************************
-  .header-left {
-    margin-left: 40px; // Déplace l'ensemble de la section (logo et menu) vers la droite
-  }
-
-  //*****************************
-  // header-nav
-  //*****************************
   .header-nav {
+    font-weight: bold;
     .main-menu li a {
       font-weight: bold;
-      font-size: 16px;
-    }
-  }
-
-  //*****************************
-  // header-right
-  //*****************************
-  .header-right {
-    width: 35%;
-    margin-right: 2vw;
-    text-align: right;
-
-    // Styles des liens "Rechercher un trajet" et "Publier un trajet"
-    .custom-link {
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-
-      &:hover {
-        color: #cc3508;
-        transition: color 0.3s ease;
-      }
-    }
-
-    // Style des icones placées devant les liens
-    .custom-icon {
-      font-size: 1.2em;
-      color: #cc3508;
-      margin-right: 8px;
-
-      &:hover {
-        color: #000;
-        transition: color 0.1s ease;
-      }
-    }
-
-    // Style de l'icone menu Inscription/Connexion
-    .dropdown-toggle {
-      background-color: transparent; // Le fond du bouton est transparent, donc il n'y a pas de couleur de fond visible.
-      border: none; // Aucun bord n'est appliqué autour du bouton pour un style plus épuré et minimaliste.
-      padding: 0; // Aucun espace supplémentaire n'est ajouté autour du contenu à l'intérieur du bouton, ce qui rend l'élément aussi compact que possible.
-      display: flex; // Le bouton utilise `flexbox` pour organiser son contenu (comme l'icône) en ligne (par défaut, `flex-direction: row`).
-      align-items: center; // Le contenu du bouton (comme l'icône utilisateur et l'éventuelle flèche) est centré verticalement.
-
-      // Styles pour l'icône SVG à l'intérieur du bouton (comme `FaUserCircle`):
-      svg {
-        color: #cc3508; // L'icône est colorée en rouge foncé (code couleur hexadécimal #cc3508).
-        font-size: 2.2em !important; // L'icône a une taille massive de 9em, ce qui la rend très visible (en fonction de la taille de la police de l'élément parent).
-        margin-right: 3px; // Un petit espace (3px) est ajouté à droite de l'icône, probablement pour séparer l'icône du reste du contenu du bouton.
-      }
-
-      // Pseudo-élément `::after`, utilisé pour ajouter une petite flèche vers le bas à côté de l'icône (par exemple, pour indiquer un menu déroulant):
-      &::after {
-        content: ""; // Génère un contenu vide pour le pseudo-élément. Ici, ce sera une flèche stylisée.
-        border: solid #000; // Applique une bordure noire solide autour du pseudo-élément.
-        border-width: 0 2px 2px 0; // Crée une flèche en ne dessinant que deux côtés de la bordure (droite et bas).
-        padding: 4px; // Ajoute de l'espace (4px) à l'intérieur de la flèche, ce qui détermine sa taille.
-        transform: rotate(
-          45deg
-        ); // La flèche est tournée de 45 degrés pour ressembler à une flèche orientée vers le bas.
-        margin-left: 5px; // Un espace de 5px est ajouté à gauche du pseudo-élément, séparant la flèche du reste du contenu (comme l'icône utilisateur).
-      }
-
-      &:active {
-        background-color: transparent; // Change la couleur de fond à un transparent quand le bouton est cliqué
-      }
-    }
-
-    .dropdown-menu {
-      border-radius: 8px; // Les coins du menu déroulant sont arrondis avec un rayon de 8px, ce qui donne un aspect plus doux et moins angulaire.
-      border: 1px solid #eaeaea; // Une bordure fine (1px) et claire (#eaeaea, gris très pâle) entoure le menu pour le délimiter visuellement.
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); // Une ombre subtile est ajoutée pour créer un effet de profondeur.
-      // L'ombre est placée en dessous du menu avec une distance verticale de 4px et une expansion de 8px, avec une opacité faible (0.1) pour ne pas être trop marquée.
-      min-width: 200px; // La largeur minimale du menu est fixée à 200px, ce qui assure qu'il ne soit pas trop étroit.
-      padding: 10px; // Un espace intérieur (padding) de 10px est ajouté autour du contenu du menu pour ne pas coller les éléments aux bords.
-
-      // Styles spécifiques pour les éléments individuels du menu déroulant :
-      .dropdown-item {
-        padding: 8px 15px; // Chaque élément du menu (lien ou texte) a un espace intérieur de 8px en haut et en bas, et de 15px sur les côtés, pour donner de l'espace autour du texte.
-        font-size: 14px; // La taille du texte est fixée à 14px, ce qui est une taille standard pour une bonne lisibilité sans être trop grand.
-        color: #0f0f0f; // La couleur du texte est un gris foncé (#333), suffisamment contrasté pour être lisible mais plus doux que du noir pur.
-        font-weight: bold;
-
-        // Styles appliqués lorsque l'utilisateur survole un élément du menu :
-        &:hover {
-          background-color: #f1f1f1; // Lorsque l'utilisateur survole l'élément, son fond devient gris clair (#f1f1f1), offrant un retour visuel clair.
-          color: #dd3705; // Le texte passe au rouge vif (#ff0000) lors du survol, ajoutant un contraste marqué et attirant l'attention sur l'élément sélectionné.
-        }
-      }
     }
   }
 }

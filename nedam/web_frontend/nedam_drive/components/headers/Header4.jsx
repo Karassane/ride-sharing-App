@@ -29,7 +29,7 @@ export default function Header4() {
   }, []);
   return (
     <header
-      className={`header header-white header-bg-2 sticky-bar header-homepage5 header4-custom ${
+      className={`header header-white header-bg-2 sticky-bar header4-custom ${
         scrolled ? "stick" : ""
       }`}
     >
@@ -61,32 +61,7 @@ export default function Header4() {
               </div>
             </div>
 
-            {/* header-right original : */}
-            {/* <div className="header-right">
-              <div className="d-none d-xxl-inline-block align-middle mr-10">
-                <a
-                  className="text-14-medium call-phone color-white hover-up"
-                  href="tel:+41227157000"
-                >
-                  +41 22 715 7000
-                </a>
-              </div>
-              <div className="d-none d-xxl-inline-block box-dropdown-cart align-middle mr-10">
-                <Language />
-              </div>
-              <div className="box-button-login d-inline-block mr-10 align-middle">
-                <Link className="btn btn-default hover-up" href="/login">
-                  Log In
-                </Link>
-              </div>
-              <div className="box-button-login d-none2 d-inline-block align-middle">
-                <Link className="btn btn-white hover-up" href="/register">
-                  Sign Up
-                </Link>
-              </div>
-            </div> */}
-
-            {/* header-right modified : */}
+            {/* header-right: */}
             <div className="header-right d-flex align-items-center justify-content-end">
               <div className="d-inline-block mr-4">
                 <Link
