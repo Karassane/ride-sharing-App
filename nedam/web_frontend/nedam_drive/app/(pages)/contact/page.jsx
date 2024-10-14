@@ -2,8 +2,8 @@ import BreadCumb from "@/components/contact/BreadCumb";
 import ContactForm from "@/components/contact/ContactForm";
 import Map from "@/components/contact/Map";
 import Offices from "@/components/contact/Offices";
-import Footer1 from "@/components/footers/Footer1";
-import Header1 from "@/components/headers/Header1";
+import Footer4 from "@/components/footers/Footer4";
+import Header4 from "@/components/headers/Header4";
 import MobailHeader1 from "@/components/headers/MobailHeader1";
 export const metadata = {
   title: "NEDAM Drive - Contact",
@@ -12,7 +12,7 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      <Header1 />
+      <Header4 />
       <MobailHeader1 />
       <main className="main">
         <BreadCumb />
@@ -20,7 +20,7 @@ export default function page() {
         <Map />
         <ContactForm />
       </main>
-      <Footer1 />
+      <Footer4 />
     </>
   );
 }

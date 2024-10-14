@@ -17,9 +17,12 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      <Header4 /> <MobailHeader1 />
-      <main className="main">
+      <MobailHeader1 />
+      <div className="hero-header-wrapper">
+        <Header4 />
         <Hero />
+      </div>
+      <main className="main">
         <Services />
         <DownloadApp />
         <Steps />

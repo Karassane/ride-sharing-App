@@ -135,4 +135,36 @@ TABLE CONTENT
 // Importation du fichier de styles personnalisés. Ce fichier peut contenir des overrides
 // ou des ajustements spécifiques aux besoins du projet qui ne sont pas couverts par
 // les autres fichiers SCSS.
+
 @import "./custom.scss";
+
+// ----------------------------
+// Personnalisation du styles du wrapper .hero-header-wrapper de la page principale
+// ----------------------------
+
+.hero-header-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* 100% de la hauteur de la fenêtre */
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-header-wrapper header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Assurez-vous que le header est au-dessus */
+}
+
+.hero-header-wrapper .banner-home-4,
+.hero-header-wrapper .banner-carpooling,
+.hero-header-wrapper .banner-daily,
+.hero-header-wrapper .banner-driver {
+  flex: 1; /* Assure que le Hero occupe tout l'espace disponible */
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%; /* Assure que le Hero prend tout l'espace restant */
+}
