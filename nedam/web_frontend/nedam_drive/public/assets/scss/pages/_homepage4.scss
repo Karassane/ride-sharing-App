@@ -98,14 +98,21 @@
   position: relative;
   .heading-52-medium {
     color: #ffffff !important;
-    font-size: 80px !important;
-    margin-left: 20px;
-  }
-
-  .text-16 {
-    color: #ffffff !important;
     font-size: 40px !important;
     margin-left: 20px;
+  }
+  .heading-52-large {
+    color: #ffffff !important;
+    font-size: 60px !important;
+    margin-left: 20px;
+  }
+  .text-16 {
+    color: #ffffff !important;
+    font-size: 30px !important;
+    width: 100% !important; // Assurer que l'élément prenne toute la largeur disponible
+    position: absolute !important; // Pour positionner l'élément de manière précise
+    text-align: right !important;
+    right: 0 !important;
   }
 }
 

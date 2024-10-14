@@ -14,6 +14,7 @@ export default function Hero() {
             backgroundImage: "url(assets/imgs/page/homepage1/banner3.png)",
           }}
         ></div>
+
         <div className="box-banner-info">
           <p className="text-16 color-white wow fadeInUp">
             Where Would You Like To Go?
@@ -43,6 +44,7 @@ export default function Hero() {
             </Link>
           </div>
         </div>
+
         <div className="box-search-ride box-search-ride-style-2 light-input">
           <div className="box-search-tabs wow fadeInUp">
             <div className="head-tabs">

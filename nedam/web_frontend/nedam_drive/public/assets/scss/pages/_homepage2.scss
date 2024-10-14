@@ -212,6 +212,14 @@
     }
   }
 }
+
+.banner-carpooling {
+  .box-search-tabs {
+    bottom: 120px; // Déplacé plus vers le haut
+    right: -120px; // Déplacé plus vers la droite
+  }
+}
+
 .nav-tabs-search {
   border-bottom: 1px solid $color-border;
   li {
