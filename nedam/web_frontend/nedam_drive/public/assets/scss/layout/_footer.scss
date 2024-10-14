@@ -119,8 +119,10 @@
     background-image: none;
   }
 
-  &.footer-8 {
-    background-color: #c01f09 !important;
+  .footer-8,
+  .footer-box-inner,
+  .container-sub {
+    background-color: #fdeeec !important;
   }
 }
 .width-20 {
