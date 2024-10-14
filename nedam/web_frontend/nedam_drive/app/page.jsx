@@ -11,10 +11,8 @@ import Services from "@/components/homes/home-10/Services";
 import Steps from "@/components/homes/home-4/Steps";
 import MobailHeader1 from "@/components/headers/MobailHeader1";
 export const metadata = {
-  title:
-    "Home 4 || Lixride Chauffeur Limousine Transport and Car Hire Nextjs Template",
-  description:
-    "Lixride Chauffeur Limousine Transport and Car Hire Nextjs Template",
+  title: "NEDAM Drive",
+  description: "NEDAM Drive services",
 };
 export default function page() {
   return (
