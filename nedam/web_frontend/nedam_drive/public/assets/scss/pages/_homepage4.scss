@@ -41,10 +41,73 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 90vh; /* 100% of the viewport height */
-  
+
   position: relative;
 }
 
+.banner-driver {
+  background-image: url(/assets/imgs/page/driver/driver_1.webp) !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh; /* 100% of the viewport height */
+
+  position: relative;
+
+  .heading-52-medium {
+    color: #ffffff !important;
+    font-size: 80px !important;
+    margin-left: 20px;
+  }
+
+  .text-16 {
+    color: #ffffff !important;
+    font-size: 40px !important;
+    margin-left: 20px;
+  }
+}
+
+.banner-daily {
+  background-image: url(/assets/imgs/page/daily/algeria_1.jpg) !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh; /* 100% of the viewport height */
+
+  position: relative;
+
+  .heading-52-medium {
+    color: #fcf9f9 !important;
+    font-size: 80px !important;
+    margin-left: 20px;
+  }
+
+  .text-16 {
+    color: #fefffe !important;
+    font-size: 40px !important;
+    margin-left: 20px;
+  }
+}
+
+.banner-carpooling {
+  background-image: url(/assets/imgs/page/carpooling/algeria_2.jpg) !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh; /* 100% of the viewport height */
+  position: relative;
+  .heading-52-medium {
+    color: #ffffff !important;
+    font-size: 80px !important;
+    margin-left: 20px;
+  }
+
+  .text-16 {
+    color: #ffffff !important;
+    font-size: 40px !important;
+    margin-left: 20px;
+  }
+}
 
 .box-banner-homepage-4 {
   position: absolute; /* Permet un positionnement libre à l'intérieur de .banner-home-4 */

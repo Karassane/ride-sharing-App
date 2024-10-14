@@ -6,7 +6,7 @@ import Partners from "@/components/common/partners/Partners";
 import DownloadApp from "@/components/homes/home-4/DownloadApp";
 import Features from "@/components/homes/common/features/Features";
 import Feet from "@/components/homes/home-4/Feet";
-import Hero from "@/components/homes/home-4/Hero";
+import Hero from "@/components/otherPages/carpooling/Hero";
 import Service from "@/components/homes/home-4/Service";
 import Steps from "@/components/homes/home-4/Steps";
 import MobailHeader1 from "@/components/headers/MobailHeader1";
