@@ -741,12 +741,12 @@
   //*****************************
   // header4 global styles
   //*****************************
-  background-color: transparent; /* Rendre le fond transparent par défaut */
+  background-color: transparent !important; /* Rendre le fond transparent par défaut */
   transition: background-color 0.3s ease; /* Ajouter une transition douce */
 
   // Si l'utilisateur scroll, assure la transparence :
   &.stick {
-    background-color: #fdeeec; /* Garder le fond transparent même après scroll */
+    background-color: #fdeeec !important; /* Garder le fond transparent même après scroll */
     transition: background-color 0.3s ease;
   }
 

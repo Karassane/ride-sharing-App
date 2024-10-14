@@ -1,44 +1,38 @@
-import Footer8 from "@/components/footers/Footer8";
+import Footer4 from "@/components/footers/Footer4";
 import Header4 from "@/components/headers/Header4";
-import MobailHeader1 from "@/components/headers/MobailHeader1";
 import Blogs from "@/components/homes/common/blogs/Blogs2";
 import Cta from "@/components/homes/common/cta/Cta";
-
-import Facts from "@/components/common/facts/Facts";
-import Faq from "@/components/homes/home-1/Faq";
-import Features from "@/components/common/features/Features";
-import Feet from "@/components/homes/home-1/Feet";
-import Hero from "@/components/homes/home-1/Hero";
 import Partners from "@/components/common/partners/Partners";
-import Process from "@/components/common/process/Process";
-import Service from "@/components/homes/home-1/Service";
-import Testimonials from "@/components/common/testimonials/Testimonials2";
-import DownloadApp from "@/components/common/downloadApp/DownloadApp";
+import DownloadApp from "@/components/homes/home-4/DownloadApp";
+import Features from "@/components/homes/common/features/Features";
+import Feet from "@/components/homes/home-4/Feet";
+import Hero from "@/components/homes/home-4/Hero";
+import Service from "@/components/homes/home-4/Service";
+import Steps from "@/components/homes/home-4/Steps";
+import MobailHeader1 from "@/components/headers/MobailHeader1";
 export const metadata = {
   title:
-    "Home 1 || Lixride Chauffeur Limousine Transport and Car Hire Nextjs Template",
+    "Home 4 || Lixride Chauffeur Limousine Transport and Car Hire Nextjs Template",
   description:
     "Lixride Chauffeur Limousine Transport and Car Hire Nextjs Template",
 };
-export default function Home() {
+export default function page() {
   return (
     <>
       <Header4 /> <MobailHeader1 />
       <main className="main">
         <Hero />
-        <Partners />
-        <Feet />
-        <Process />
-        <Features />
-        <Facts />
-        <Service />
-        <Testimonials />
-        <Cta />
-        <Blogs />
-        <Faq />
         <DownloadApp />
+        <Steps />
+        <Service />
+        <Feet />
+        <Features />
+        <div className="border-bottom mt-30"></div>
+        <Partners />
+        <Blogs />
+        <Cta />
       </main>
-      <Footer8 />
+      <Footer4 />
     </>
   );
 }
