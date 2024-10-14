@@ -80,31 +80,18 @@ export const services4 = [
 export const services5 = [
   {
     id: 1,
-    image: "/assets/imgs/page/homepage10/service1.png",
-    title: "Intercity Rides",
+    image: "/assets/imgs/page/homepage10/Carpooling_services.jpg",
+    title: "NEDAM Carpooling Express",
+    subtitle: "Get where you want, with Carpooling Express Travel!",
     description:
-      "The price of tickets for low-cost airlines for a specific route has a much larger spread than that of regular airlines. It depends on the time to departure, demand and competition on the route. Unlike regular airlines, low-cost airlines rarely offer cheap tickets more than 3 months before departure.",
+      "Discover a smarter way to travel! Choose your route and instantly connect with drivers heading the same way, all at a competitive price. Why pay more when you can share the journey for less?",
   },
   {
     id: 2,
-    image: "/assets/imgs/page/homepage10/service2.png",
-    title: "Intercity Rides",
-    description:
-      "The price of tickets for low-cost airlines for a specific route has a much larger spread than that of regular airlines. It depends on the time to departure, demand and competition on the route. Unlike regular airlines, low-cost airlines rarely offer cheap tickets more than 3 months before departure.",
-  },
-  {
-    id: 1,
-    image: "/assets/imgs/page/homepage10/service1.png",
-    title: "Intercity Rides",
-    description:
-      "The price of tickets for low-cost airlines for a specific route has a much larger spread than that of regular airlines. It depends on the time to departure, demand and competition on the route. Unlike regular airlines, low-cost airlines rarely offer cheap tickets more than 3 months before departure.",
-  },
-  {
-    id: 2,
-    image: "/assets/imgs/page/homepage10/service2.png",
-    title: "Intercity Rides",
-    description:
-      "The price of tickets for low-cost airlines for a specific route has a much larger spread than that of regular airlines. It depends on the time to departure, demand and competition on the route. Unlike regular airlines, low-cost airlines rarely offer cheap tickets more than 3 months before departure.",
+    image: "/assets/imgs/page/homepage10/services_test.png",
+    title: "NEDAM Daily",
+    subtitle: "Have your ride waiting for you days before you leave with NEDAM Daily",
+    description:"Save more with our daily ride subscription! Book your rides for the entire month at a better price than booking individually. Have your ride waiting for you days in advance, offering both convenience and savings.",
   },
 ];
 export const allServices = [...services, ...services4, ...services5];

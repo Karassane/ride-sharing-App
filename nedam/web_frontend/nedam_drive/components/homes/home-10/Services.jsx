@@ -17,9 +17,9 @@ export default function Services() {
     };
   }, []);
   const settings = {
-    slidesPerView: "auto",
+    slidesPerView: "1",
     spaceBetween: 70,
-    loop: true,
+    loop: false,
     navigation: {
       nextEl: ".snbn26",
       prevEl: ".snbp26",
@@ -67,7 +67,7 @@ export default function Services() {
       <div className="box-slide-fleet  mt-60">
         <div className="box-swiper">
           <Swiper
-            style={{ maxWidth: "100vw", overflow: "hidden" }}
+            style={{ maxWidth: "80vw", overflow: "hidden" }}
             {...settings}
             className="swiper-container swiper-group-auto swiper-services-auto pb-45"
           >
@@ -85,8 +85,11 @@ export default function Services() {
                     </Link>
                   </div>
                   <div className="cardInfo">
-                    <h3 className="cardTitle heading-44-medium color-text mb-30">
+                    <h1 className="cardTitle heading-44-medium color-text mb-30">
                       {elm.title}
+                    </h1>
+                    <h3 className="cardTitle heading-24-medium color-text mb-30">
+                      {elm.subtitle}
                     </h3>
                     <p className="text-16 color-text">{elm.description}</p>
                     <div className="mt-30">

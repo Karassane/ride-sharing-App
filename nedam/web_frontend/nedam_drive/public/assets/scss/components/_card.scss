@@ -550,15 +550,20 @@
   display: flex;
   align-items: center;
   height: auto;
+  
   .cardImage {
-    width: 45%;
+    width: 60%;
     position: relative;
-    padding: 50px 50px 50px 0px;
+    top : 0px;
+    right : 0px;
+    padding: 0px 0px 0px 0px;
     height: auto;
     img {
       display: block;
       width: 100%;
       position: relative;
+      top : 0px;
+      left : 0px;
       z-index: 2;
       border-radius: 0;
     }
