@@ -1,37 +1,38 @@
-import Header6 from "@/components/headers/Header6";
-import Blogs from "@/components/homes/home-6/Blogs";
-import Cities from "@/components/homes/common/cities/Cities";
-import Faq from "@/components/homes/home-6/Faq";
-import Features from "@/components/homes/home-6/Features";
-import Feet from "@/components/homes/home-6/Feet";
-import Hero from "@/components/homes/home-6/Hero";
-import Process from "@/components/homes/home-6/Process";
-import Testimonials from "@/components/homes/home-6/Testimonials";
-import Features2 from "@/components/homes/common/features/Features";
-import Footer6 from "@/components/footers/Footer6";
+import Footer4 from "@/components/footers/Footer4";
+import Header4 from "@/components/headers/Header4";
+import Blogs from "@/components/homes/common/blogs/Blogs2";
+import Cta from "@/components/homes/common/cta/Cta";
+import Partners from "@/components/common/partners/Partners";
+import DownloadApp from "@/components/homes/home-4/DownloadApp";
+import Features from "@/components/homes/common/features/Features";
+import Feet from "@/components/homes/home-4/Feet";
+import Hero from "@/components/homes/home-4/Hero";
+import Service from "@/components/homes/home-4/Service";
+import Steps from "@/components/homes/home-4/Steps";
 import MobailHeader1 from "@/components/headers/MobailHeader1";
 export const metadata = {
   title:
-    "Home 6 || Lixride Chauffeur Limousine Transport and Car Hire Nextjs Template",
+    "Home 4 || Lixride Chauffeur Limousine Transport and Car Hire Nextjs Template",
   description:
     "Lixride Chauffeur Limousine Transport and Car Hire Nextjs Template",
 };
 export default function page() {
   return (
     <>
-      <Header6 /> <MobailHeader1 />
+      <Header4 /> <MobailHeader1 />
       <main className="main">
         <Hero />
-        <Process />
+        <DownloadApp />
+        <Steps />
+        <Service />
         <Feet />
-        <Faq />
-        <Testimonials />
         <Features />
-        <Cities />
+        <div className="border-bottom mt-30"></div>
+        <Partners />
         <Blogs />
-        <Features2 />
+        <Cta />
       </main>
-      <Footer6 />
+      <Footer4 />
     </>
   );
 }
