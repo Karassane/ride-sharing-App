@@ -12,37 +12,35 @@ export default function Hero() {
           <h1 className="heading-52-medium color-text mb-30 wow fadeInUp">
             Nedam Daily, Your daily carpool partner !
           </h1>
-          <div className="box-search-ride box-search-ride-style-3">
-            <div className="box-form-search wow fadeInUp">
-              <div className="search-item search-from">
-                <div className="search-icon">
-                  <span className="item-icon icon-from"> </span>
-                </div>
-                <div className="search-inputs">
-                  <label className="text-14 color-grey">From</label>
-                  <PlacePicker />
-                </div>
+          <div className="box-search-ride box-search-ride-3 wow fadeInUp">
+            <div className="search-item search-from">
+              <div className="search-icon">
+                <span className="item-icon icon-from"> </span>
               </div>
-              <div className="search-item search-to">
-                <div className="search-icon">
-                  <span className="item-icon icon-to"> </span>
-                </div>
-                <div className="search-inputs">
-                  <label className="text-14 color-grey">To</label>
-                  <PlacePicker />
-                </div>
+              <div className="search-inputs">
+                <label className="text-14 color-grey">From</label>
+                <PlacePicker />
               </div>
-              <div className="search-item search-button mb-0">
-                <button className="btn btn-search" type="submit">
-                  <Image
-                    width={20}
-                    height={20}
-                    src="/assets/imgs/template/icons/search.svg"
-                    alt="luxride"
-                  />
-                  Search
-                </button>
+            </div>
+            <div className="search-item search-to">
+              <div className="search-icon">
+                <span className="item-icon icon-to"> </span>
               </div>
+              <div className="search-inputs">
+                <label className="text-14 color-grey">To</label>
+                <PlacePicker />
+              </div>
+            </div>
+            <div className="search-item search-button">
+              <button className="btn btn-search" type="submit">
+                <Image
+                  width={20}
+                  height={20}
+                  src="/assets/imgs/template/icons/search.svg"
+                  alt="luxride"
+                />
+                Search
+              </button>
             </div>
           </div>
         </div>
