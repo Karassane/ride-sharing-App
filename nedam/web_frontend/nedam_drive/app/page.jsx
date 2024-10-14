@@ -1,4 +1,4 @@
-import Footer8 from "@/components/footers/Footer8";
+import Footer4 from "@/components/footers/Footer4";
 import Header4 from "@/components/headers/Header4";
 import Blogs from "@/components/homes/common/blogs/Blogs2";
 import Cta from "@/components/homes/common/cta/Cta";
@@ -32,7 +32,7 @@ export default function page() {
         <Blogs />
         <Cta />
       </main>
-      <Footer8 />
+      <Footer4 />
     </>
   );
 }
