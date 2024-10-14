@@ -1,4 +1,4 @@
-import Footer4 from "@/components/footers/Footer4";
+import Footer8 from "@/components/footers/Footer8";
 import Header4 from "@/components/headers/Header4";
 import MobailHeader1 from "@/components/headers/MobailHeader1";
 import Blogs from "@/components/homes/common/blogs/Blogs2";
@@ -38,7 +38,7 @@ export default function Home() {
         <Faq />
         <DownloadApp />
       </main>
-      <Footer4 />
+      <Footer8 />
     </>
   );
 }

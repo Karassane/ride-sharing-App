@@ -93,6 +93,7 @@
   &.footer-3 {
     background-image: none;
   }
+
   &.footer-4 {
     .btn.btn-link-location {
       &:hover,
@@ -107,6 +108,7 @@
       }
     }
   }
+
   &.footer-5 {
     .box-footer-top {
       border-bottom: 0px;
@@ -115,6 +117,10 @@
   &.footer-6 {
     padding-top: 60px;
     background-image: none;
+  }
+
+  &.footer-8 {
+    background-color: #c01f09 !important;
   }
 }
 .width-20 {
