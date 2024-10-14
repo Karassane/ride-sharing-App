@@ -10,7 +10,7 @@ export default function Hero() {
             Where Would You Like To Go?
           </p>
           <h1 className="heading-52-medium color-text mb-30 wow fadeInUp">
-            Your Personal Driver & Chauffeur Service
+            Anywhere in ALGERIA, Anytime, for the Best Price !
           </h1>
           <div className="box-search-ride box-search-ride-style-3">
             <div className="box-form-search wow fadeInUp">

@@ -37,12 +37,14 @@
 }
 .banner-home-4 {
   background-image: url(/assets/imgs/page/homepage4/volvo.jpg);
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent repeating the image */
-  background-size: cover; /* Ensure the image covers the entire background */
-  height: 750px; /* Adjust height as needed */
-  position: relative; /* Necessary for positioning text */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh; /* 100% of the viewport height */
+  
+  position: relative;
 }
+
 
 .box-banner-homepage-4 {
   position: absolute; /* Permet un positionnement libre à l'intérieur de .banner-home-4 */
