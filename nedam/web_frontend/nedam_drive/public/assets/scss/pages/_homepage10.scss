@@ -162,12 +162,32 @@
   display: inline-block;
   border-radius: 6px;
 }
+
 .bg-our-service-home-10 {
-  margin: 90px 0px 120px 0px;
+  /* Réduit l'espace global (marge supérieure et inférieure) autour de la section "Our Services".
+     Initialement, il y avait 90px en haut et 120px en bas. Cela a été réduit à 30px en haut et 80px en bas.
+     Cela permet de rapprocher visuellement la section "Our Services" du contenu précédent. */
+  margin: 30px 0px 80px 0px !important;
+
   .box-pagination-fleet {
-    margin-top: 30px;
+    /* Enlève toute marge supérieure avant la section des flèches de pagination.
+       Cela rapproche davantage les flèches du contenu précédent, minimisant l'espace. */
+    margin-top: 80px;
+  }
+
+  .box-slide-fleet {
+    /* Réduit l'espace au-dessus du conteneur des images de 80px à 10px.
+       Cela rapproche les images du titre "Our Services", créant un espacement plus compact et esthétique. */
+    margin-top: 10px !important; /* Réduire cette valeur */
+  }
+
+  .swiper-container {
+    /* Supprime complètement l'espace en dessous du conteneur des images (le padding-bottom était de 20px).
+       Cela rapproche les flèches de navigation (pagination) des images, réduisant ainsi l'espace blanc superflu sous les images. */
+    padding-bottom: 0px !important; /* Diminue l'espace sous l'image */
   }
 }
+
 .swiper-services-auto {
   .swiper-slide {
     max-width: "80vw";
