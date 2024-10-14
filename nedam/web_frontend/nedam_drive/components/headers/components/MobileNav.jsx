@@ -60,6 +60,36 @@ export default function MobileNav() {
       ))}
       <li>
         <Link
+          className={`${"/driver" == pathname ? "active-link" : ""}`}
+          style={{ fontSize: "20px" }}
+          href="/driver"
+        >
+          Driver
+        </Link>
+      </li>
+
+      <li>
+        <Link
+          className={`${"/carpooling" == pathname ? "active-link" : ""}`}
+          style={{ fontSize: "20px" }}
+          href="/carpooling"
+        >
+          Carpooling
+        </Link>
+      </li>
+
+      <li>
+        <Link
+          className={`${"/daily" == pathname ? "active-link" : ""}`}
+          style={{ fontSize: "20px" }}
+          href="/daily"
+        >
+          Daily
+        </Link>
+      </li>
+
+      <li>
+        <Link
           className={`${"/contact" == pathname ? "active-link" : ""}`}
           style={{ fontSize: "20px" }}
           href="/contact"
