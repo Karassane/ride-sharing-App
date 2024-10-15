@@ -248,7 +248,7 @@
   .cardImage {
     display: flex;
     justify-content: center; 
-    width: 570px; /* Fixer la largeur de l'image */
+    width: 800px; /* Fixer la largeur de l'image */
     height: 790px; /* Fixer la hauteur de l'image */
     position: relative;
     top: 0px;
@@ -313,8 +313,8 @@
       //transform: translateY(-2px); /* Move it up slightly */
       font-weight: 900;
       color: white; /* Darker color on hover */
-      line-height: 1.2; /* Adjust line height if needed to balance the bold effect */
-      letter-spacing: -0.5px; /* You can reduce letter spacing slightly to maintain consistency */
+      //line-height: 1.2; /* Adjust line height if needed to balance the bold effect */
+      //letter-spacing: -0.5px; /* You can reduce letter spacing slightly to maintain consistency */
     }
   }
 }
