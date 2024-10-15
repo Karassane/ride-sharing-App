@@ -579,6 +579,16 @@ img {
   margin-right: auto;
   margin-left: auto;
 }
+
+.container-sub-custom {
+  max-width: 2000px !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding-left: 0 !important;  /* Remove left padding */
+  padding-right: 0 !important; /* Remove right padding */
+  margin-left: 0 !important;   /* Remove left margin */
+  margin-right: 0 !important;  /* Remove right margin */
+}
 .border-bottom {
   border-bottom: 1px solid $color-border;
 }

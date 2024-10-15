@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Service() {
   return (
     <section className="section pt-30">
-      <div className="container-sub">
+      <div className="container-sub container-sub-custom">
         
         <div className="row mt-30">
           {services.slice(0, 2).map((elm, i) => (
@@ -36,7 +36,7 @@ export default function Service() {
             </div>
           ))}
         </div>
-        
+
         <div className="text-center">
           <h2 className="heading-44-medium wow fadeInUp">Our Services</h2>
         </div>
