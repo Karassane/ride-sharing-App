@@ -255,7 +255,18 @@
     right: 0px;
     left: 0px;
     padding: 0px;
-  
+    overflow: hidden;
+    
+
+    /* Apply hover effect to the whole cardImage */
+    &:hover img {
+      transform: scale(1.05); /* Zoom the image */
+    }
+
+    /* Ensure .cardInfo doesn't cancel the hover effect */
+    &:hover .cardInfo {
+      transform: none; /* No transformation on cardInfo */
+    }
     img {
       display: flex;
       width: 100%;
@@ -264,10 +275,12 @@
       position: relative;
       top: 0px;
       left: 0px;
-      z-index: 2;
-      border-radius: 0;
+      z-index: 1;
+      border-radius: 0;  
+      transition: transform 0.8s ease !important; 
     }
   }
+  
   .cardInfo {
     position: absolute; /* Position it absolutely within cardImage */
     top: 4%; /* Center vertically */
@@ -276,13 +289,14 @@
     z-index: 2; /* Ensure it is above the image */
     text-align: left; /* Center text */
     color: black; /* Change text color as needed */
+    pointer-events: none; /* Ensure text hover doesn't interfere with image hover */
     
     .text-custom-title {
       
-      font-weight: 770; /* Makes the text bold */
+      font-weight: 1000; /* Makes the text bold */
       font-size: 40px; /* Change this to your desired size */
       color: #333; /* Change this to your desired color */
-      font-family: Arial, sans-serif;
+      font-family: Roboto;
       //text-decoration: underline;
       /* Add more styles as needed, like font-family, text-transform, etc. */
     }
@@ -293,6 +307,7 @@
       font-family: Arial, sans-serif;
       text-decoration: none;
       transition: transform 0.2s ease, color 0.2s ease; /* Smooth transition */
+      pointer-events: auto;
     }
     .text-custom-description:hover {
       //transform: translateY(-2px); /* Move it up slightly */
@@ -300,6 +315,9 @@
       color: #000; /* Darker color on hover */
     }
   }
+}
+.cardServiceStyle2:hover .cardImage img {
+  transform: scale(1.05); /* Ensure zoom effect remains active */
 }
 .cardServiceStyle3 {
   height: 290px;

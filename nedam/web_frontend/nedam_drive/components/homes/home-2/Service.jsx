@@ -12,16 +12,14 @@ export default function Service() {
         <div className="row mt-60">
           {services.slice(0, 2).map((elm, i) => (
             <div key={i} className="col-lg-6 mb-30">
-              <div className="cardServiceStyle2 wow fadeInUp">
+              <div className="cardServiceStyle2">
                 <div className="cardImage" >
-                  <Link href={`/service-single/${elm.id}`}>
                     <Image
                       width={370}
                       height={400}
                       src={elm.image}
                       alt="Luxride"
                     />
-                  </Link>
                 </div>
                 <div className="cardInfo">
                   <h3 className="text-custom-title mb-8">
