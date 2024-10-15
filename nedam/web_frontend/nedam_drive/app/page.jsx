@@ -10,6 +10,7 @@ import Hero from "@/components/homes/home-4/Hero";
 import Services from "@/components/homes/home-10/Services";
 import Steps from "@/components/homes/home-4/Steps";
 import MobailHeader1 from "@/components/headers/MobailHeader1";
+import Service from "@/components/homes/home-2/Service";
 export const metadata = {
   title: "NEDAM Drive",
   description: "NEDAM Drive services",
@@ -23,6 +24,7 @@ export default function page() {
         <Hero />
       </div>
       <main className="main">
+        <Service />
         <Services />
         <DownloadApp />
         <Steps />

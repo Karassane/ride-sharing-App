@@ -1,40 +1,17 @@
 export const services = [
   {
     id: 1,
-    title: "Intercity Rides",
+    title: "NEDAM Carpooling Express",
     description: "Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS or similar",
-    image: "/assets/imgs/page/homepage1/service1.png",
+    image: "/assets/imgs/page/homepage10/services_test3.jpg",
   },
   {
     id: 2,
-    title: "Chauffeur Hailing",
+    title: "NEDAM Daily",
     description: "Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS or similar",
-    image: "/assets/imgs/page/homepage1/service2.png",
+    image: "/assets/imgs/page/homepage10/services_test4.jpg",
   },
-  {
-    id: 3,
-    title: "Airport Transfers",
-    description: "Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS or similar",
-    image: "/assets/imgs/page/homepage1/service3.png",
-  },
-  {
-    id: 4,
-    title: "Sprinter Class",
-    description: "Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS or similar",
-    image: "/assets/imgs/page/homepage1/service5.png",
-  },
-  {
-    id: 5,
-    title: "Wedding Class",
-    description: "Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS or similar",
-    image: "/assets/imgs/page/services/wedding.png",
-  },
-  {
-    id: 6,
-    title: "Travel Transfer",
-    description: "Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS or similar",
-    image: "/assets/imgs/page/services/travel.png",
-  },
+  
 ];
 export const services2 = [
   { id: 1, text: "Intercity Rides" },

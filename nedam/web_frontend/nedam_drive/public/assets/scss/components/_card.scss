@@ -236,15 +236,42 @@
     margin-bottom: 20px;
   }
 }
+
 .cardServiceStyle2 {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center;    /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100%;           /* Ensure the card takes full height of its parent */
   .cardImage {
-    overflow: hidden;
-    border-radius: 6px;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; 
+    width: 550px; /* Fixer la largeur de l'image */
+    height: 790px; /* Fixer la hauteur de l'image */
+    position: relative;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    padding: 0px;
+    
+
     img {
+      display: flex;
       width: 100%;
-      display: block;
+      height: 100%;
+      object-fit: cover; /* Maintient l'image dans les proportions tout en remplissant le conteneur */
+      position: relative;
+      top: 0px;
+      left: 0px;
+      z-index: 2;
+      border-radius: 0;
     }
+  }
+  .cardInfo {
+    display: flex;
+    flex-direction: column; /* Stack text elements vertically */
+    align-items: center;    /* Center text elements horizontally */
+    text-align: center;     /* Center the text content */
   }
 }
 .cardServiceStyle3 {
