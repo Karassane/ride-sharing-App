@@ -1,14 +1,14 @@
 export const services = [
   {
-    id: 1,
-    title: "NEDAM Carpooling Express",
-    description: "Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS or similar",
+    id: "carpooling",
+    title: "CARPOOLING",
+    description: "Share the Road, Share the Experience.",
     image: "/assets/imgs/page/homepage10/services_test3.jpg",
   },
   {
-    id: 2,
-    title: "NEDAM Daily",
-    description: "Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS or similar",
+    id: "daily",
+    title: "DAILY",
+    description: "Have your ride waiting for",
     image: "/assets/imgs/page/homepage10/services_test4.jpg",
   },
   

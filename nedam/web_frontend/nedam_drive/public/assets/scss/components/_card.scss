@@ -243,6 +243,8 @@
   align-items: center;    /* Center horizontally */
   justify-content: center; /* Center vertically */
   height: 100%;           /* Ensure the card takes full height of its parent */
+  width: 100%;
+  position: relative;
   .cardImage {
     display: flex;
     justify-content: center; 
@@ -253,8 +255,7 @@
     right: 0px;
     left: 0px;
     padding: 0px;
-    
-
+  
     img {
       display: flex;
       width: 100%;
@@ -268,10 +269,36 @@
     }
   }
   .cardInfo {
-    display: flex;
-    flex-direction: column; /* Stack text elements vertically */
-    align-items: center;    /* Center text elements horizontally */
-    text-align: center;     /* Center the text content */
+    position: absolute; /* Position it absolutely within cardImage */
+    top: 4%; /* Center vertically */
+    left: 10%; /* Center horizontally */
+    //transform: translate(-50%, -50%); /* Offset to truly center */
+    z-index: 2; /* Ensure it is above the image */
+    text-align: left; /* Center text */
+    color: black; /* Change text color as needed */
+    
+    .text-custom-title {
+      
+      font-weight: 770; /* Makes the text bold */
+      font-size: 40px; /* Change this to your desired size */
+      color: #333; /* Change this to your desired color */
+      font-family: Arial, sans-serif;
+      //text-decoration: underline;
+      /* Add more styles as needed, like font-family, text-transform, etc. */
+    }
+    .text-custom-description {
+      font-weight: 600;
+      font-size: 25px; /* Change this to your desired size */
+      color: #333; /* Change this to your desired color */
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      transition: transform 0.2s ease, color 0.2s ease; /* Smooth transition */
+    }
+    .text-custom-description:hover {
+      //transform: translateY(-2px); /* Move it up slightly */
+      font-weight: 700;
+      color: #000; /* Darker color on hover */
+    }
   }
 }
 .cardServiceStyle3 {

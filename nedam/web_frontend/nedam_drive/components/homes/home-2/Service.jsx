@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Service() {
   return (
-    <section className="section pt-60">
+    <section className="section pt-20">
       <div className="container-sub">
         <div className="text-center">
           <h2 className="heading-44-medium wow fadeInUp">Our Services</h2>
@@ -24,33 +24,15 @@ export default function Service() {
                   </Link>
                 </div>
                 <div className="cardInfo">
-                  <h3 className="cardTitle text-20-medium color-text mb-10">
+                  <h3 className="text-custom-title mb-8">
                     {elm.title}
                   </h3>
-                  <p className="cardDesc text-14 color-text mb-10">
-                    {elm.description}
-                  </p>
-                  <Link
-                    className="cardLink btn btn-link hover-up"
-                    href={`/service-single/${elm.id}`}
-                  >
-                    Learn more
-                    <svg
-                      className="icon-16"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-                      ></path>
-                    </svg>
-                  </Link>
+                  <Link href={`/${elm.id}`} className="text-custom-description"> 
+                    <p className="text-custom-description mb-10">
+                      {elm.description}
+                    </p>
+                  </Link>   
+                 
                 </div>
               </div>
             </div>
