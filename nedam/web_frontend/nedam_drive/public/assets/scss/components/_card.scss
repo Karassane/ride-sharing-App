@@ -248,7 +248,7 @@
   .cardImage {
     display: flex;
     justify-content: center; 
-    width: 550px; /* Fixer la largeur de l'image */
+    width: 570px; /* Fixer la largeur de l'image */
     height: 790px; /* Fixer la hauteur de l'image */
     position: relative;
     top: 0px;
@@ -284,7 +284,7 @@
   .cardInfo {
     position: absolute; /* Position it absolutely within cardImage */
     top: 4%; /* Center vertically */
-    left: 10%; /* Center horizontally */
+    left: 8%; /* Center horizontally */
     //transform: translate(-50%, -50%); /* Offset to truly center */
     z-index: 2; /* Ensure it is above the image */
     text-align: left; /* Center text */
@@ -295,7 +295,7 @@
       
       font-weight: 1000; /* Makes the text bold */
       font-size: 40px; /* Change this to your desired size */
-      color: #333; /* Change this to your desired color */
+      color: #ffffff; /* Change this to your desired color */
       font-family: Roboto;
       //text-decoration: underline;
       /* Add more styles as needed, like font-family, text-transform, etc. */
@@ -303,16 +303,18 @@
     .text-custom-description {
       font-weight: 600;
       font-size: 25px; /* Change this to your desired size */
-      color: #333; /* Change this to your desired color */
+      color: #ffffff98; /* Change this to your desired color */
       font-family: Arial, sans-serif;
       text-decoration: none;
-      transition: transform 0.2s ease, color 0.2s ease; /* Smooth transition */
+      transition: transform 0.9s ease, color 0.2s ease; /* Smooth transition */
       pointer-events: auto;
     }
     .text-custom-description:hover {
       //transform: translateY(-2px); /* Move it up slightly */
-      font-weight: 700;
-      color: #000; /* Darker color on hover */
+      font-weight: 900;
+      color: white; /* Darker color on hover */
+      line-height: 1.2; /* Adjust line height if needed to balance the bold effect */
+      letter-spacing: -0.5px; /* You can reduce letter spacing slightly to maintain consistency */
     }
   }
 }

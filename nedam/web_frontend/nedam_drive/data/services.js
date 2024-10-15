@@ -3,13 +3,13 @@ export const services = [
     id: "carpooling",
     title: "CARPOOLING",
     description: "Share the Road, Share the Experience",
-    image: "/assets/imgs/page/homepage10/services_test3.jpg",
+    image: "/assets/imgs/page/homepage10/services_test7.jpg",
   },
   {
     id: "daily",
     title: "DAILY",
     description: "Have your ride waiting for",
-    image: "/assets/imgs/page/homepage10/services_test4.jpg",
+    image: "/assets/imgs/page/homepage10/services_test5.jpg",
   },
   
 ];
