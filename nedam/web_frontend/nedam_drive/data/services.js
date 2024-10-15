@@ -3,7 +3,7 @@ export const services = [
     id: "carpooling",
     title: "CARPOOLING",
     description: "Share the Road, Share the Experience",
-    image: "/assets/imgs/page/homepage10/services_test7.jpg",
+    image: "/assets/imgs/page/homepage10/services_test8.jpeg",
   },
   {
     id: "daily",

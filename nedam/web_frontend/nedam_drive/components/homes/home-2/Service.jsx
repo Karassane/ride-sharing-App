@@ -15,8 +15,8 @@ export default function Service() {
               <div className="cardServiceStyle2">
                 <div className="cardImage" >
                     <Image
-                      width={370}
-                      height={400}
+                      width={1000}
+                      height={1500}
                       src={elm.image}
                       alt="Luxride"
                     />
