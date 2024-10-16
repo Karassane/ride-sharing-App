@@ -437,6 +437,7 @@ h6 {
 .bg-2 {
   background-color: $background-bg-2 !important;
 }
+
 .bg-3 {
   background-color: $background-bg-3 !important;
 }
@@ -584,10 +585,10 @@ img {
   max-width: 2000px !important;
   width: 100% !important;
   height: 100% !important;
-  padding-left: 0 !important;  /* Remove left padding */
+  padding-left: 0 !important; /* Remove left padding */
   padding-right: 0 !important; /* Remove right padding */
-  margin-left: 0 !important;   /* Remove left margin */
-  margin-right: 0 !important;  /* Remove right margin */
+  margin-left: 0 !important; /* Remove left margin */
+  margin-right: 0 !important; /* Remove right margin */
 }
 .border-bottom {
   border-bottom: 1px solid $color-border;

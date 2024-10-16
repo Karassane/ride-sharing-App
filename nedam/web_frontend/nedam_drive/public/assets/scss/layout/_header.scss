@@ -741,13 +741,12 @@
   //*****************************
   // header4 global styles
   //*****************************
-
   background-color: transparent !important; /* Rendre le fond transparent par défaut */
   transition: background-color 0.3s ease; /* Ajouter une transition douce */
 
-  // Si l'utilisateur scroll, assure la transparence :
+  // Si l'utilisateur scroll, on attribue une couleur au header :
   &.stick {
-    background-color: #fdeeec !important; /* Garder le fond transparent même après scroll */
+    background-color: #ffffff81 !important; /* #fdeeec #ffffff81 */
     transition: background-color 0.3s ease;
   }
 
@@ -856,4 +855,8 @@
       }
     }
   }
+}
+
+.header4-custom.header-white .main-menu > li {
+  padding: 10px 0px !important; /* Réduit le padding entre les éléments du menu */
 }

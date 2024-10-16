@@ -95,18 +95,40 @@
   }
 
   &.footer-4 {
-    .btn.btn-link-location {
-      &:hover,
-      .active {
-        background-color: $background-white;
-      }
+    .footer-1 {
+      background-color: #7c6c6c81 !important; /* #fdeeec #ffffff81 */
+      transition: background-color 0.3s ease;
     }
-    .btn.btn-link-globe {
-      &:hover,
-      &.active {
-        background-color: $background-white;
-      }
+    .box-footer-top {
+      margin-left: 100px !important; /* Change cette valeur selon tes besoins */
+      margin-right: 100px !important; /* Change cette valeur selon tes besoins */
     }
+    .footer-bottom {
+      margin-left: 100px !important; /* Change cette valeur selon tes besoins */
+      margin-right: 100px !important; /* Change cette valeur selon tes besoins */
+    }
+    .mb-20 {
+      margin-left: 130px !important; /* Change cette valeur selon tes besoins */
+      margin-right: 140px !important; /* Change cette valeur selon tes besoins */
+    }
+    .menu-footer {
+      margin-left: 100px !important; /* Change cette valeur selon tes besoins */
+      margin-right: 100px !important; /* Change cette valeur selon tes besoins */
+    }
+
+    // Modifier le styles du bouton globe et location :
+    // .btn.btn-link-location {
+    //   &:hover,
+    //   .active {
+    //     background-color: red;
+    //   }
+    // }
+    // .btn.btn-link-globe {
+    //   &:hover,
+    //   &.active {
+    //     background-color: rgb(218, 196, 196);
+    //   }
+    // }
   }
 
   &.footer-5 {
