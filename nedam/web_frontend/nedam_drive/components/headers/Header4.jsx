@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import Nav from "./components/Nav";
-
 import Image from "next/image";
 import Link from "next/link";
 import Language from "./components/Language";
@@ -9,28 +8,33 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FaSearch, FaPlusCircle, FaUserCircle } from "react-icons/fa";
 
 export default function Header4() {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolledUp, setScrolledUp] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0); // Position précédente du scroll
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 200) {
-        setScrolled(true);
+      if (window.scrollY < lastScrollY && window.scrollY > 200) {
+        // Si l'utilisateur défile vers le haut
+        setScrolledUp(true);
       } else {
-        setScrolled(false);
+        // Si l'utilisateur défile vers le bas
+        setScrolledUp(false);
       }
+      setLastScrollY(window.scrollY); // Mettre à jour la dernière position du scroll
     };
 
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up the event listener when component unmounts
+    // Nettoyer l'event listener lorsque le composant est démonté
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [lastScrollY]); // Réagir à chaque changement de lastScrollY
+
   return (
     <header
       className={`header header-white header-bg-2 sticky-bar header4-custom ${
-        scrolled ? "stick" : ""
+        scrolledUp ? "stick" : ""
       }`}
     >
       <div className="container-fluid box-header-home4">

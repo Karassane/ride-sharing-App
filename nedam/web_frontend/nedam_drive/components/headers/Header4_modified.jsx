@@ -6,7 +6,6 @@ import Link from "next/link";
 import Language from "./components/Language";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaSearch, FaPlusCircle, FaUserCircle } from "react-icons/fa";
-// import "../../public/assets/scss/headers/header4.scss";
 
 export default function Header4() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,28 +21,21 @@ export default function Header4() {
 
     window.addEventListener("scroll", handleScroll);
 
+    // Clean up the event listener when component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
   return (
     <header
-      className={`header header-white header-bg-2 sticky-bar ${
+      className={`header header-white header-bg-2 sticky-bar header4-custom ${
         scrolled ? "stick" : ""
       }`}
-      style={{
-        backgroundColor: "transparent",
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 1000,
-      }}
     >
       <div className="container-fluid box-header-home4">
         <div className="main-header">
           <div className="header-left">
+            {/* Logo : */}
             <div className="header-logo">
               <Link className="d-flex" href="/">
                 <Image
@@ -55,6 +47,7 @@ export default function Header4() {
               </Link>
             </div>
 
+            {/* header-nav: */}
             <div className="header-nav">
               <nav className="nav-main-menu d-none d-xl-block">
                 <ul className="main-menu">
@@ -67,6 +60,7 @@ export default function Header4() {
               </div>
             </div>
 
+            {/* header-right: */}
             <div className="header-right d-flex align-items-center justify-content-end">
               <div className="d-inline-block mr-4">
                 <Link
