@@ -31,6 +31,35 @@
       background-color: $color-primary;
     }
   }
+  .search-passengers {
+    display: flex;
+    align-items: center;
+  }
+  
+  .passenger-controls {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Space between label and buttons */
+  }
+  
+  .passenger-btn {
+    background-color: #007bff; /* Adjust color as needed */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .passenger-count {
+    margin: 0 0px; /* Space between buttons and count */
+    font-size: 16px;
+    color: black;
+    display: relative;
+    align-items: center;
+    justify-content: center;
+  }
+  
 }
 .box-header-home4 {
   padding: 0px 60px;
