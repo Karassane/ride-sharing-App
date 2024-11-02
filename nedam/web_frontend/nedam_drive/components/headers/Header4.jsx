@@ -47,7 +47,7 @@ export default function Header4() {
                   width={150}
                   height={50}
                   alt="Luxride"
-                  src="/assets/imgs/template/logo-black.svg"
+                  src="/assets/imgs/template/nedam_logo.png"
                 />
               </Link>
             </div>
