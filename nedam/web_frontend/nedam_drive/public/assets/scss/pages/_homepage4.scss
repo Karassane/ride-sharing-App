@@ -15,8 +15,26 @@
     border-radius: 6px;
     margin-bottom: 10px;
     padding: 10px;
-    .search-icon .item-icon {
-      background-color: $background-white;
+    .search-icon {
+      /* Your existing styles */
+    }
+    
+    .item-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgb(221, 17, 17); // Red color for visibility
+    }
+
+    .passenger-count {
+      color: black;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
   .search-button {
@@ -51,16 +69,9 @@
     font-size: 16px;
   }
   
-  .passenger-count {
-    margin: 0 0px; /* Space between buttons and count */
-    font-size: 16px;
-    color: black;
-    display: relative;
-    align-items: center;
-    justify-content: center;
-  }
-  
 }
+
+
 .box-header-home4 {
   padding: 0px 60px;
 }
