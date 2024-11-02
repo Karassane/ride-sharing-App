@@ -38,6 +38,8 @@
       align-items: center;
       width: 100%;
       .header-logo {
+        // filter: grayscale(100%) brightness(0); // couleur noire unie du logo nedam
+        // filter: brightness(0) invert(1); // couleur blanche unie du logo nedam
         max-width: 300px;
         width: 100%;
         a {
@@ -755,6 +757,20 @@
   //*****************************
   .header-left {
     margin-left: 40px; // Déplace l'ensemble de la section (logo et menu) vers la droite
+  }
+
+  .header-logo {
+    // filter: grayscale(100%) brightness(0); // couleur noire unie du logo nedam
+    filter: brightness(0) invert(1); // couleur blanche unie du logo nedam
+
+    max-width: 300px;
+    width: 100%;
+    a {
+      display: block;
+      img {
+        min-height: 37px;
+      }
+    }
   }
 
   //*****************************
