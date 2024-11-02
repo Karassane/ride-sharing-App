@@ -44,8 +44,8 @@ export default function Header4() {
             <div className="header-logo">
               <Link className="d-flex" href="/">
                 <Image
-                  width={150}
-                  height={50}
+                  width={250}
+                  height={40}
                   alt="Luxride"
                   src="/assets/imgs/template/nedam_logo.png"
                 />
