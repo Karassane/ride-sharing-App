@@ -64,7 +64,7 @@ const Hero = () => {
             
             {/* Passenger Control */}
             <div className="search-item search-passengers">
-  <div className="search-icon">
+            <div className="search-icon">
     
     <span className="item-icon icon-passengers">
     <span className="passenger-count" style={{
@@ -82,27 +82,25 @@ const Hero = () => {
 
     </span>
     
-  </div>
-  <div className="search-inputs">
-    
-    <label className="text-14 color-grey">Passengers</label>
-    <div className="passenger-controls" style={{ border: '1px solid red' }}>
-      <button
-        className="passenger-btn"
-        onClick={() => handlePassengerChange(-1)}
-      >
-        -
-      </button>
-      
-      <button
-        className="passenger-btn"
-        onClick={() => handlePassengerChange(1)}
-      >
-        +
-      </button>
-    </div>
-  </div>
-</div>
+            </div>
+            <div className="search-inputs">
+              <label className="text-14 color-grey">Passengers</label>
+              <div className="passenger-controls">
+                <button
+                  className="passenger-btn"
+                  onClick={() => handlePassengerChange(-1)}
+                  >
+                  -
+                </button>
+                <button
+                  className="passenger-btn"
+                  onClick={() => handlePassengerChange(1)}
+                  >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
             
             {/* Search Button */}
             <div className="search-item search-button">
