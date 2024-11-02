@@ -10,7 +10,10 @@ const Hero = () => {
   const handlePassengerChange = (change) => {
     setPassengerCount((prevCount) => {
       const newCount = prevCount + change;
-      return newCount < 1 ? 1 : newCount; // Ensure count doesn't go below 1
+      // Ensure count doesn't go below 1 and doesn't exceed 6
+      if (newCount < 1) return 1;
+      if (newCount > 6) return 6;
+      return newCount;
     });
   };
 
@@ -61,36 +64,43 @@ const Hero = () => {
             
             {/* Passenger Control */}
             <div className="search-item search-passengers">
-  <div className="search-icon">
+            <div className="search-icon">
     
     <span className="item-icon icon-passengers">
-    <span className="passenger-count" style={{ color: 'black', fontSize: '24px' }}>
+    <span className="passenger-count" style={{
+      color: 'black',
+      fontSize: '24px',
+      //fontWeight: 'bold',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '100%',
+      height: '100%',
+    }}>
         {passengerCount}
       </span>
 
     </span>
     
-  </div>
-  <div className="search-inputs">
-    
-    <label className="text-14 color-grey">Passengers</label>
-    <div className="passenger-controls" style={{ border: '1px solid red' }}>
-      <button
-        className="passenger-btn"
-        onClick={() => handlePassengerChange(-1)}
-      >
-        -
-      </button>
-      
-      <button
-        className="passenger-btn"
-        onClick={() => handlePassengerChange(1)}
-      >
-        +
-      </button>
-    </div>
-  </div>
-</div>
+            </div>
+            <div className="search-inputs">
+              <label className="text-14 color-grey">Passengers</label>
+              <div className="passenger-controls">
+                <button
+                  className="passenger-btn"
+                  onClick={() => handlePassengerChange(-1)}
+                  >
+                  -
+                </button>
+                <button
+                  className="passenger-btn"
+                  onClick={() => handlePassengerChange(1)}
+                  >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
             
             {/* Search Button */}
             <div className="search-item search-button">
