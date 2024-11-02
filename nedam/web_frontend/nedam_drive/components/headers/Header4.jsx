@@ -41,13 +41,45 @@ export default function Header4() {
         <div className="main-header">
           <div className="header-left">
             {/* Logo : */}
-            <div className="header-logo">
+            <svg width="0" height="0">
+              <defs>
+                <filter id="metallic">
+                  <feGaussianBlur
+                    in="SourceGraphic"
+                    stdDeviation="1.5"
+                    result="blur"
+                  />
+                  <feSpecularLighting
+                    in="blur"
+                    surfaceScale="5"
+                    specularConstant=".75"
+                    specularExponent="40"
+                    lighting-color="#ffffff"
+                    result="specOut"
+                  >
+                    <fePointLight x="-15000" y="-50000" />
+                  </feSpecularLighting>
+                  <feComposite
+                    in="SourceGraphic"
+                    in2="specOut"
+                    operator="arithmetic"
+                    k1="0"
+                    k2="1"
+                    k3="1"
+                    k4="0"
+                  />
+                </filter>
+              </defs>
+            </svg>
+
+            <div class="header-logo">
               <Link className="d-flex" href="/">
                 <Image
                   width={250}
                   height={40}
-                  alt="Luxride"
+                  alt="Nedam"
                   src="/assets/imgs/template/nedam_logo.png"
+                  style={{ filter: "url(#metallic)" }}
                 />
               </Link>
             </div>
