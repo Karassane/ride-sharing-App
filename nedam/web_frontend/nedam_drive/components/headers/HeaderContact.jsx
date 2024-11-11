@@ -74,7 +74,7 @@ export default function Header4() {
 
             <div
               className="header-logo"
-              style={{ filter: "brightness(0) invert(1)" }}
+              style={{ filter: "brightness(0) invert(0)" }}
             >
               <Link className="d-flex" href="/">
                 <Image

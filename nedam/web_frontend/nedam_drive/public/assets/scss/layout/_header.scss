@@ -760,9 +760,6 @@
   }
 
   .header-logo {
-    // filter: grayscale(100%) brightness(0); // couleur noire unie du logo nedam
-    filter: brightness(0) invert(1); // couleur blanche unie du logo nedam
-
     max-width: 300px;
     width: 100%;
     a {
