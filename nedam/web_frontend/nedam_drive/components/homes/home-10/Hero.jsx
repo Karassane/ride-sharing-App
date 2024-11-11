@@ -7,13 +7,13 @@ export default function Hero() {
       <TripCard
         date="Demain"
         fromCity="Paris"
-        toCity="Lille"
+        toCity="Algiers"
         departureTime="00:30"
         arrivalTime="02:40"
         duration="2h10"
-        price="25,99"
+        price="9,99"
         driver={{
-          name: "Ramzani",
+          name: "Fares",
           avatar: "/assets/imgs/page/driver/driver_1.webp",
           rating: "4.8",
         }}
