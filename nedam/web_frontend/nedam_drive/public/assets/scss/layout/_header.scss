@@ -502,6 +502,8 @@
 
 .box-dropdown-cart {
   position: relative;
+  // filter: invert(1);
+
   .dropdown-account {
     padding: 25px 25px;
     width: 150px;
@@ -511,15 +513,18 @@
         a {
           color: $color-white;
           text-decoration: none;
+          // filter: invert(1);
           img {
             float: left;
             margin: 4px 10px 0px 0px;
+            // filter: invert(1);
           }
         }
       }
     }
   }
 }
+
 .dropdown-cart {
   display: none;
   visibility: hidden;
@@ -737,6 +742,8 @@
   }
 }
 
+//###################### header4-custom #########################//
+
 .header4-custom {
   //*****************************
   // header4 global styles
@@ -755,6 +762,17 @@
   //*****************************
   .header-left {
     margin-left: 40px; // Déplace l'ensemble de la section (logo et menu) vers la droite
+  }
+
+  .header-logo {
+    max-width: 300px;
+    width: 100%;
+    a {
+      display: block;
+      img {
+        min-height: 37px;
+      }
+    }
   }
 
   //*****************************
@@ -859,4 +877,46 @@
 
 .header4-custom.header-white .main-menu > li {
   padding: 10px 0px !important; /* Réduit le padding entre les éléments du menu */
+}
+
+//###################### HeaderDaily #########################//
+
+.headerDaily {
+  @extend .header4-custom;
+
+  .header-nav {
+    .main-menu li.has-children > a::after {
+      filter: invert(
+        1
+      ); // Applique le filtre pour inverser la couleur de l'icône placée devant la section Home du menu header
+    }
+  }
+
+  // Personnalisation de .main-menu li a
+  .header-nav {
+    .main-menu li a {
+      color: #ffffff;
+    }
+  }
+
+  .header-right {
+    // Styles des liens "Rechercher un trajet" et "Publier un trajet"
+    .custom-link {
+      color: #ffffff;
+    }
+  }
+
+  // Style de l'icône menu Inscription/Connexion
+  .dropdown-toggle {
+    &::after {
+      filter: invert(1); // Applique le filtre pour inverser la couleur
+    }
+  }
+
+  .box-dropdown-cart {
+    filter: invert(1);
+    .dropdown-account ul li a img {
+      filter: invert(1);
+    }
+  }
 }

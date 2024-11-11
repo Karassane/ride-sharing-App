@@ -1,5 +1,5 @@
 import Footer4 from "@/components/footers/Footer4";
-import Header4 from "@/components/headers/Header4";
+import HeaderDaily from "@/components/headers/HeaderDaily";
 import Blogs from "@/components/homes/common/blogs/Blogs2";
 import Cta from "@/components/homes/common/cta/Cta";
 import Partners from "@/components/common/partners/Partners";
@@ -19,7 +19,7 @@ export default function page() {
     <>
       <MobailHeader1 />
       <div className="hero-header-wrapper">
-        <Header4 />
+        <HeaderDaily />
         <Hero />
       </div>
       <main className="main">

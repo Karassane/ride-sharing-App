@@ -33,45 +33,13 @@ export default function Header4() {
 
   return (
     <header
-      className={`header header-white header-bg-2 sticky-bar header4-custom ${
+      className={`header header-white header-bg-2 sticky-bar headerDaily ${
         scrolledUp ? "stick" : ""
       }`}
     >
       <div className="container-fluid box-header-home4">
         <div className="main-header">
           <div className="header-left">
-            {/* Logo : */}
-            {/* <svg width="0" height="0">
-              <defs>
-                <filter id="metallic">
-                  <feGaussianBlur
-                    in="SourceGraphic"
-                    stdDeviation="1.5"
-                    result="blur"
-                  />
-                  <feSpecularLighting
-                    in="blur"
-                    surfaceScale="5"
-                    specularConstant=".75"
-                    specularExponent="40"
-                    lightingColor="#ffffff"
-                    result="specOut"
-                  >
-                    <fePointLight x="-15000" y="-50000" />
-                  </feSpecularLighting>
-                  <feComposite
-                    in="SourceGraphic"
-                    in2="specOut"
-                    operator="arithmetic"
-                    k1="0"
-                    k2="1"
-                    k3="1"
-                    k4="0"
-                  />
-                </filter>
-              </defs>
-            </svg> */}
-
             <div
               className="header-logo"
               style={{ filter: "brightness(0) invert(1)" }}
