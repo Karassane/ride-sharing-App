@@ -54,7 +54,7 @@ export default function Header4() {
                     surfaceScale="5"
                     specularConstant=".75"
                     specularExponent="40"
-                    lighting-color="#ffffff"
+                    lightingColor="#ffffff"
                     result="specOut"
                   >
                     <fePointLight x="-15000" y="-50000" />
@@ -72,7 +72,7 @@ export default function Header4() {
               </defs>
             </svg>
 
-            <div class="header-logo">
+            <div className="header-logo">
               <Link className="d-flex" href="/">
                 <Image
                   width={250}
