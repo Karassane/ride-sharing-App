@@ -1,0 +1,109 @@
+.trip-card {
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  .trip-date {
+    h2 {
+      font-size: 1.5em;
+      color: #2d3748;
+    }
+    p {
+      font-size: 1em;
+      color: #4a5568;
+    }
+  }
+
+  .trip-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+    margin-top: 15px;
+
+    .trip-schedule {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+
+      .time {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #2d3748;
+      }
+      .duration {
+        font-size: 0.9em;
+        color: #718096;
+        margin: 5px 0;
+      }
+      .locations {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        span {
+          font-size: 0.9em;
+          color: #2d3748;
+        }
+      }
+    }
+
+    .driver-info {
+      display: flex;
+      align-items: center;
+      gap: 10px; // Ajout d'espacement entre les éléments pour les aligner en ligne
+
+      .driver-avatar {
+        border-radius: 50%;
+        margin-right: 5px; // Réduction de l'espacement pour une meilleure apparence
+      }
+
+      .driver-details {
+        display: flex;
+        align-items: center;
+        gap: 5px; // Espacement entre nom, note, et badge
+
+        p {
+          font-size: 1em;
+          font-weight: bold;
+          color: #2d3748;
+          margin: 0;
+        }
+
+        .rating {
+          font-size: 0.9em;
+          color: #ff9900;
+        }
+
+        .badge {
+          background-color: #e2e8f0;
+          color: #3182ce;
+          border-radius: 5px;
+          padding: 2px 8px;
+          font-size: 0.8em;
+          margin-left: 5px; // Espacement pour séparer le badge du reste
+        }
+      }
+
+      .instant-booking {
+        color: #3182ce;
+        font-size: 0.9em;
+        display: flex;
+        align-items: center;
+        margin-left: 10px; // Assure un espacement entre l'icône et la section réservation
+      }
+    }
+
+    .trip-price {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #2d3748;
+    }
+  }
+}
