@@ -1,7 +1,16 @@
+"use client";
+
 import React from "react";
-import TripCard from "@/components/TripCard/TripCard"; // Composant Trip Card
+import TripCard from "@/components/TripCard/TripCard";
+import { useRouter } from "next/navigation"; // Importer useRouter
 
 export default function Hero() {
+  const router = useRouter();
+
+  const handleTripCardClick = () => {
+    router.push("/carpool-reservation"); // Rediriger vers la page /reservation
+  };
+
   return (
     <div className="centered-container">
       <TripCard
@@ -17,6 +26,7 @@ export default function Hero() {
           avatar: "/assets/imgs/page/driver/driver_1.webp",
           rating: "4.8",
         }}
+        onClick={handleTripCardClick} // Passez la fonction de clic
       />
     </div>
   );

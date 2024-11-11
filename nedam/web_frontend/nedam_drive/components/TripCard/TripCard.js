@@ -15,14 +15,16 @@ const TripCard = ({
     avatar: "/assets/imgs/page/driver/driver_1.webp",
     rating: "4.8",
   },
+  onClick, // Ajoutez onClick comme prop
 }) => {
   return (
-    <div className="trip-card">
+    <div className="trip-card" onClick={onClick} style={{ cursor: "pointer" }}>
+      {" "}
+      {/* Ajout de onClick et du curseur */}
       <div className="trip-date">
         <h2>{date}</h2>
         <p>{`${fromCity}, France ➔ ${toCity}, France : 85 trajets disponibles`}</p>
       </div>
-
       <div className="trip-details">
         <div className="trip-schedule">
           <div className="schedule-top">
@@ -43,7 +45,6 @@ const TripCard = ({
           <span>{price} DZA</span>
         </div>
       </div>
-
       <div className="driver-details">
         <Image
           src="/assets/imgs/template/car.webp"
