@@ -3,7 +3,7 @@ import Image from "next/image";
 import "./TripCard.scss";
 
 const TripCard = ({
-  date = "Demain", // Valeur par défaut pour la date
+  date = "Demain",
   fromCity = "Paris",
   toCity = "Lille",
   departureTime = "00:30",
@@ -11,7 +11,7 @@ const TripCard = ({
   duration = "2h10",
   price = "25,99",
   driver = {
-    name: "Fares",
+    name: "Ramzani",
     avatar: "/assets/imgs/page/driver/driver_1.webp",
     rating: "4.8",
   },
@@ -23,37 +23,49 @@ const TripCard = ({
         <p>{`${fromCity}, France ➔ ${toCity}, France : 85 trajets disponibles`}</p>
       </div>
 
-      <div className="trip-info">
+      <div className="trip-details">
         <div className="trip-schedule">
-          <span className="time">{departureTime}</span>
-          <span className="duration">{duration}</span>
-          <span className="time">{arrivalTime}</span>
-          <div className="locations">
+          <div className="schedule-top">
+            <span className="time">{departureTime}</span>
+            <div className="line-container">
+              <div className="line"></div>
+              <span className="duration">{duration}</span>
+              <div className="line"></div>
+            </div>
+            <span className="time">{arrivalTime}</span>
+          </div>
+          <div className="schedule-bottom">
             <span>{fromCity}</span>
             <span>{toCity}</span>
           </div>
         </div>
-
-        <div className="driver-info">
-          <Image
-            src={driver.avatar}
-            alt="Driver avatar"
-            width={30}
-            height={30}
-            className="driver-avatar"
-          />
-          <div className="driver-details">
-            <p>{driver.name}</p>
-            <span className="rating">★ {driver.rating}</span>
-            <span className="badge">Super Driver</span>
-          </div>
-          <div className="instant-booking">
-            <span>⚡ Réservation instantanée</span>
-          </div>
-        </div>
-
         <div className="trip-price">
           <span>{price} €</span>
+        </div>
+      </div>
+
+      <div className="driver-details">
+        <Image
+          src="/assets/imgs/template/car.webp"
+          alt="Car icon"
+          width={30}
+          height={30}
+          className="car-icon"
+        />
+        <Image
+          src={driver.avatar}
+          alt="Driver avatar"
+          width={40}
+          height={40}
+          className="driver-avatar"
+        />
+        <div className="driver-info">
+          <p className="driver-name">{driver.name}</p>
+          <span className="rating">★ {driver.rating}</span>
+          <span className="badge">Super Driver</span>
+        </div>
+        <div className="instant-booking">
+          <span>⚡ Réservation instantanée</span>
         </div>
       </div>
     </div>

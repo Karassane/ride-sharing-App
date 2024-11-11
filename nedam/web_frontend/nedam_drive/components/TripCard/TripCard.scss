@@ -1,109 +1,194 @@
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f5f9;
+}
+
 .trip-card {
-  max-width: 800px;
+  max-width: 1000px;
+  width: 100%;
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
+  padding: 20px 25px;
+  font-family: Arial, sans-serif;
 
   .trip-date {
     h2 {
-      font-size: 1.5em;
-      color: #2d3748;
+      font-size: 1.4em;
+      color: #1d3557;
+      margin: 0;
+      margin-bottom: 8px;
     }
     p {
-      font-size: 1em;
-      color: #4a5568;
+      font-size: 0.9em;
+      color: #6c757d;
+      margin: 0;
     }
+    margin-bottom: 15px;
   }
 
-  .trip-info {
+  .trip-details {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    border-top: 1px solid #e2e8f0;
-    padding-top: 15px;
-    margin-top: 15px;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
 
     .trip-schedule {
       display: flex;
       flex-direction: column;
-      text-align: center;
       align-items: center;
 
-      .time {
-        font-size: 1.2em;
-        font-weight: bold;
-        color: #2d3748;
+      .schedule-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .time {
+          font-size: 1.2em;
+          font-weight: bold;
+          color: #1d3557;
+        }
+
+        .line-container {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 200px; /* Augmentez légèrement pour plus d'espace entre les lignes */
+
+          .line {
+            flex: 1;
+            height: 2px;
+            background-color: #eb6309;
+            position: relative;
+            margin: 0 25px; /* Ajoutez un espacement horizontal plus large pour espacer davantage les lignes */
+          }
+
+          .line::before,
+          .line::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background-color: #eb6309;
+            border-radius: 50%;
+          }
+
+          .line:first-of-type::before {
+            position: absolute;
+            top: -3px;
+          }
+
+          .line:last-of-type::after {
+            position: absolute;
+            right: -8px; /* Décalage pour mieux aligner le cercle droit */
+            top: -3px;
+          }
+
+          .duration {
+            position: absolute;
+            top: -10px; /* Position légèrement plus haute */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.85em;
+            color: #000000;
+            background-color: transparent;
+            padding: 0 5px;
+            font-weight: bold;
+          }
+        }
+
+        .schedule-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+          .time {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #1d3557;
+            margin: 0 8px; /* Ajout d'espace autour des heures */
+          }
+        }
       }
-      .duration {
-        font-size: 0.9em;
-        color: #718096;
-        margin: 5px 0;
-      }
-      .locations {
+
+      .schedule-bottom {
         display: flex;
         justify-content: space-between;
         width: 100%;
+        margin-top: 5px;
+
         span {
           font-size: 0.9em;
-          color: #2d3748;
+          color: #1d3557;
         }
-      }
-    }
-
-    .driver-info {
-      display: flex;
-      align-items: center;
-      gap: 10px; // Ajout d'espacement entre les éléments pour les aligner en ligne
-
-      .driver-avatar {
-        border-radius: 50%;
-        margin-right: 5px; // Réduction de l'espacement pour une meilleure apparence
-      }
-
-      .driver-details {
-        display: flex;
-        align-items: center;
-        gap: 5px; // Espacement entre nom, note, et badge
-
-        p {
-          font-size: 1em;
-          font-weight: bold;
-          color: #2d3748;
-          margin: 0;
-        }
-
-        .rating {
-          font-size: 0.9em;
-          color: #ff9900;
-        }
-
-        .badge {
-          background-color: #e2e8f0;
-          color: #3182ce;
-          border-radius: 5px;
-          padding: 2px 8px;
-          font-size: 0.8em;
-          margin-left: 5px; // Espacement pour séparer le badge du reste
-        }
-      }
-
-      .instant-booking {
-        color: #3182ce;
-        font-size: 0.9em;
-        display: flex;
-        align-items: center;
-        margin-left: 10px; // Assure un espacement entre l'icône et la section réservation
       }
     }
 
     .trip-price {
       font-size: 1.5em;
       font-weight: bold;
-      color: #2d3748;
+      color: #1d3557;
+      margin-left: 20px;
+    }
+  }
+
+  .driver-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .car-icon {
+      margin-right: 10px;
+      width: 24px;
+      height: 24px;
+    }
+
+    .driver-avatar {
+      border: 2px solid #1d3557;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+
+    .driver-info {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .driver-name {
+        font-size: 1em;
+        font-weight: bold;
+        color: #1d3557;
+        margin: 0;
+      }
+
+      .rating {
+        font-size: 0.9em;
+        color: #eb6309;
+      }
+
+      .badge {
+        background-color: #9ecbf0;
+        color: #1d3557;
+        border-radius: 5px;
+        padding: 2px 8px;
+        font-size: 0.8em;
+      }
+    }
+
+    .instant-booking {
+      display: flex;
+      align-items: center;
+      color: #1d3557;
+      font-size: 0.9em;
+      margin-left: auto;
     }
   }
 }
