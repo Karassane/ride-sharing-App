@@ -7,6 +7,7 @@ import TimePicker from "@/components/common/TimePicker";
 import Image from "next/image";
 import React, { useState } from "react";
 import ModalVideo from "react-modal-video";
+import TripCard from "@/components/TripCard/TripCard"; // Composant Trip Card
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
@@ -247,6 +248,24 @@ export default function Hero() {
                     </button>
                   </div>
                 </div>
+              </div>
+
+              {/* Ajout du composant TripCard */}
+              <div className="trip-results">
+                <h3>Available Trips</h3>
+                <TripCard
+                  date="Demain"
+                  departureTime="00:30"
+                  arrivalTime="02:40"
+                  duration="2h10"
+                  departureCity="Paris"
+                  arrivalCity="Marseille"
+                  driverName="Fares"
+                  driverRating="4.8"
+                  driverStatus="Super Driver"
+                  price="25,99"
+                />
+                {/* On peut dupliquer TripCard pour afficher plusieurs trajets */}
               </div>
             </div>
           </div>
