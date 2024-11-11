@@ -2,15 +2,15 @@
 import React, { useState } from "react";
 import PlacePicker from "@/components/common/PlacePicker";
 import DatePicker from "@/components/common/DatePicker";
+import PassengerStepper from "@/components/PassengerStepper/PassengerStepper"; // Assurez-vous que ce chemin est correct
 import Image from "next/image";
 
 const Hero = () => {
-  const [passengerCount, setPassengerCount] = useState(1); // Start with 1 passenger
+  const [passengerCount, setPassengerCount] = useState(1);
 
   const handlePassengerChange = (change) => {
     setPassengerCount((prevCount) => {
       const newCount = prevCount + change;
-      // Ensure count doesn't go below 1 and doesn't exceed 6
       if (newCount < 1) return 1;
       if (newCount > 6) return 6;
       return newCount;
@@ -67,12 +67,12 @@ const Hero = () => {
             <div className="search-item search-passengers">
               <div className="search-icon">
                 <span className="item-icon icon-passengers">
+                  {/* Affichage du nombre de passagers dans l'icône */}
                   <span
                     className="passenger-count"
                     style={{
                       color: "black",
                       fontSize: "24px",
-                      //fontWeight: 'bold',
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
@@ -84,24 +84,10 @@ const Hero = () => {
                   </span>
                 </span>
               </div>
+
               <div className="search-inputs">
                 <label className="text-14 color-grey">Passengers</label>
-
-                {/* Passenger +/- icon */}
-                <div className="passenger-controls">
-                  <button
-                    className="passenger-btn"
-                    onClick={() => handlePassengerChange(-1)}
-                  >
-                    -
-                  </button>
-                  <button
-                    className="passenger-btn"
-                    onClick={() => handlePassengerChange(1)}
-                  >
-                    +
-                  </button>
-                </div>
+                <PassengerStepper onPassengerChange={handlePassengerChange} />
               </div>
             </div>
 

@@ -1,20 +1,17 @@
-// PassengerStepper.scss
 .passenger-stepper {
   display: flex;
   align-items: center;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  padding: 5px 10px;
-  gap: 10px;
+  background-color: transparent;
 
   .stepper-btn {
-    width: 30px;
-    height: 30px;
-    background-color: #ff6b6b;
-    border: none;
-    border-radius: 50%;
+    width: 40px; // Largeur du bouton
+    height: 30px; // Hauteur du bouton
+    background-color: #ff5252;
+    // border: none;
+    border: 1px solid #ffffff;
+    border-radius: 0; // Pas d'arrondi sur les coins pour un effet rectangulaire
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold;
     cursor: pointer;
     display: flex;
@@ -23,7 +20,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #ff5252;
+      background-color: #000000; // Couleur de fond au survol
     }
 
     &:disabled {
@@ -32,9 +29,24 @@
     }
   }
 
-  .passenger-count {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #333;
+  .stepper-btn:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+
+  .stepper-btn:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  /* Ajouter une ligne de séparation entre les boutons */
+  .stepper-btn:first-child::after {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: #cccccc; // Couleur de la ligne de séparation
+    position: absolute;
+    right: -1px;
+    top: 0;
   }
 }
