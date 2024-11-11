@@ -4,7 +4,7 @@ import PlacePicker from "@/components/common/PlacePicker";
 import DatePicker from "@/components/common/DatePicker";
 import PassengerStepper from "@/components/PassengerStepper/PassengerStepper"; // Assurez-vous que ce chemin est correct
 import Image from "next/image";
-
+import Link from 'next/link';
 const Hero = () => {
   const [passengerCount, setPassengerCount] = useState(1);
 
@@ -93,15 +93,15 @@ const Hero = () => {
 
             {/* Search Button */}
             <div className="search-item search-button">
-              <button className="btn btn-search" type="submit">
-                <Image
-                  width={20}
-                  height={20}
-                  src="/assets/imgs/template/icons/search.svg"
-                  alt="luxride"
-                />
-                Search
-              </button>
+            <Link href="/nedam-drive-2nd" className="btn btn-search" style={{ display: 'flex', alignItems: 'center' }}>
+  <Image
+    width={20}
+    height={20}
+    src="/assets/imgs/template/icons/search.svg"
+    alt="luxride"
+  />
+  Search
+</Link>
             </div>
           </div>
         </div>
