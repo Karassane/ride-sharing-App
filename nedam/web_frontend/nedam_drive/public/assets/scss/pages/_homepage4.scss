@@ -18,16 +18,16 @@
     .search-icon {
       /* Your existing styles */
     }
-    
+
     .item-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: rgb(221, 17, 17); // Red color for visibility
-}
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgb(221, 17, 17); // Red color for visibility
+    }
 
     .passenger-count {
       color: black;
@@ -53,24 +53,22 @@
     display: flex;
     align-items: center;
   }
-  
+
   .passenger-controls {
     display: flex;
     align-items: center;
     margin-left: 10px; /* Space between label and buttons */
   }
-  
-  .passenger-btn {
-    background-color: #007bff; /* Adjust color as needed */
-    color: white;
+
+  .passenger-controls.passenger-btn {
+    background-color: #f50b0b; /* Adjust color as needed */
+    color: rgb(255, 255, 255);
     border: none;
     padding: 5px 10px;
     cursor: pointer;
     font-size: 16px;
   }
-  
 }
-
 
 .box-header-home4 {
   padding: 0px 60px;
