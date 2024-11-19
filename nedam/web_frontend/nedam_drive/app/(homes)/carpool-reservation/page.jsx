@@ -3,6 +3,7 @@ import Header4 from "@/components/headers/Header4";
 import Hero from "@/components/homes/home-10/Hero";
 import Reservation from "@/components/Reservation/Reservation";
 import MobailHeader1 from "@/components/headers/MobailHeader1";
+import WeeklyCalendar from "@/components/WeeklyCalendar/WeeklyCalendar";
 
 export const metadata = {
   title:
@@ -19,6 +20,7 @@ export default function page() {
       {/* <Hero /> */}
       <main className="main">
         <Reservation />
+        <WeeklyCalendar />
       </main>
       <Footer4 />
     </>
