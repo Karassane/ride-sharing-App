@@ -133,10 +133,14 @@
     }
 
     .trip-price {
-      font-size: 1.5em;
+      font-size: 2em;
       font-weight: bold;
       color: #1d3557;
       margin-left: 20px;
+
+      /* Nouvelle règle pour aligner avec le texte "Demain" */
+      align-self: flex-start; /* Aligne le prix en haut */
+      margin-top: -75px; /* Ajustez cette valeur pour un positionnement parfait */
     }
   }
 
