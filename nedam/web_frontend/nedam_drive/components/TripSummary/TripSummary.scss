@@ -1,0 +1,21 @@
+.trip-summary {
+  font-family: Arial, sans-serif;
+  margin: 0.5em;
+
+  .date {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1d3557; /* Couleur bleue */
+    margin: 0;
+  }
+
+  .details {
+    font-size: 14px;
+    color: #6c757d;
+    margin-top: 5px;
+  }
+  span {
+    font-weight: bold;
+    color: #007bff; /* Couleur bleue vive */
+  }
+}

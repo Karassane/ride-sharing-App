@@ -20,7 +20,6 @@ export default function page() {
       {/* <Hero /> */}
       <main className="main">
         <Reservation />
-        <WeeklyCalendar />
       </main>
       <Footer4 />
     </>
