@@ -3,32 +3,39 @@
 import React, { useState } from "react";
 import "./WeeklyCalendar.css";
 
-const daysOfWeek = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
-];
-
 const WeeklyCalendar = () => {
+  const daysOfWeek = [
+    "Lundi",
+    "Mardi",
+    "Mercredi",
+    "Jeudi",
+    "Vendredi",
+    "Samedi",
+    "Dimanche",
+  ];
+
   const initialState = daysOfWeek.reduce((acc, day) => {
     acc[day] = {
-      departureTime: "",
-      departureLocation: "",
-      arrivalTime: "",
-      arrivalLocation: "",
+      homeTime: "07:30",
+      workTime: "17:00",
+      active: true,
     };
     return acc;
   }, {});
 
   const [schedule, setSchedule] = useState(initialState);
-  const [errors, setErrors] = useState({});
-  const [loading, setLoading] = useState({});
 
-  const handleChange = (day, field, value) => {
+  const handleToggle = (day) => {
+    setSchedule({
+      ...schedule,
+      [day]: {
+        ...schedule[day],
+        active: !schedule[day].active,
+      },
+    });
+  };
+
+  const handleTimeChange = (day, field, value) => {
     setSchedule({
       ...schedule,
       [day]: {
@@ -36,147 +43,78 @@ const WeeklyCalendar = () => {
         [field]: value,
       },
     });
-
-    // Clear errors for the specific field
-    if (errors[day]) {
-      setErrors({
-        ...errors,
-        [day]: {
-          ...errors[day],
-          [field]: "",
-        },
-      });
-    }
-  };
-
-  const validate = (day) => {
-    const daySchedule = schedule[day];
-    const newErrors = {};
-
-    if (!daySchedule.departureTime) {
-      newErrors.departureTime = "Départ requis";
-    }
-    if (!daySchedule.departureLocation) {
-      newErrors.departureLocation = "Lieu de départ requis";
-    }
-    if (!daySchedule.arrivalTime) {
-      newErrors.arrivalTime = "Arrivée requise";
-    }
-    if (!daySchedule.arrivalLocation) {
-      newErrors.arrivalLocation = "Lieu d'arrivée requis";
-    }
-
-    if (Object.keys(newErrors).length > 0) {
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        [day]: newErrors,
-      }));
-      return false;
-    }
-
-    return true;
-  };
-
-  const searchDrivers = async (day) => {
-    if (!validate(day)) {
-      return;
-    }
-
-    setLoading((prevLoading) => ({
-      ...prevLoading,
-      [day]: true,
-    }));
-
-    // Simuler une requête API
-    try {
-      // Remplacez ceci par votre logique de recherche de chauffeurs
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-
-      alert(`Recherche des chauffeurs pour ${day} réussie!`);
-    } catch (error) {
-      console.error(error);
-      alert(`Erreur lors de la recherche des chauffeurs pour ${day}.`);
-    } finally {
-      setLoading((prevLoading) => ({
-        ...prevLoading,
-        [day]: false,
-      }));
-    }
   };
 
   return (
     <div className="weekly-calendar">
-      <h2>NEDAM Daily - Calendrier Hebdomadaire</h2>
-      <div className="calendar-grid">
+      <h2>Mon Trajet</h2>
+      <div className="addresses">
+        <div className="address">
+          <span className="icon">🏠</span>
+          <div>
+            <p>Domicile</p>
+            <a href="#modify-home">Modifier l'adresse</a>
+          </div>
+        </div>
+        <div className="address">
+          <span className="icon">💼</span>
+          <div>
+            <p>Travail</p>
+            <a href="#modify-work">Modifier l'adresse</a>
+          </div>
+        </div>
+      </div>
+
+      <div className="switches">
+        <label>
+          <input type="checkbox" />
+          Je suis conducteur
+        </label>
+        <label>
+          <input type="checkbox" />
+          Désactiver mon planning
+        </label>
+      </div>
+
+      <h3>Mes horaires de départ habituels</h3>
+      <div className="calendar-container">
         {daysOfWeek.map((day) => (
           <div key={day} className="day-card">
-            <h3>{day}</h3>
-            <div className="input-group">
-              <label>Heure de Départ:</label>
+            <h4>Chaque {day}</h4>
+            <div className="time-row">
+              <span>Domicile</span>
               <input
                 type="time"
-                value={schedule[day].departureTime}
+                value={schedule[day].homeTime}
                 onChange={(e) =>
-                  handleChange(day, "departureTime", e.target.value)
+                  handleTimeChange(day, "homeTime", e.target.value)
                 }
+                disabled={!schedule[day].active}
               />
-              {errors[day]?.departureTime && (
-                <span className="error">{errors[day].departureTime}</span>
-              )}
+              <label className="toggle-switch">
+                <input
+                  type="checkbox"
+                  checked={schedule[day].active}
+                  onChange={() => handleToggle(day)}
+                />
+                <span className="slider"></span>
+              </label>
             </div>
-            <div className="input-group">
-              <label>Lieu de Départ:</label>
-              <input
-                type="text"
-                placeholder="Entrez le lieu de départ"
-                value={schedule[day].departureLocation}
-                onChange={(e) =>
-                  handleChange(day, "departureLocation", e.target.value)
-                }
-              />
-              {errors[day]?.departureLocation && (
-                <span className="error">{errors[day].departureLocation}</span>
-              )}
-            </div>
-            <div className="input-group">
-              <label>Heure d'Arrivée:</label>
+            <div className="time-row">
+              <span>Travail</span>
               <input
                 type="time"
-                value={schedule[day].arrivalTime}
+                value={schedule[day].workTime}
                 onChange={(e) =>
-                  handleChange(day, "arrivalTime", e.target.value)
+                  handleTimeChange(day, "workTime", e.target.value)
                 }
+                disabled={!schedule[day].active}
               />
-              {errors[day]?.arrivalTime && (
-                <span className="error">{errors[day].arrivalTime}</span>
-              )}
             </div>
-            <div className="input-group">
-              <label>Lieu d'Arrivée:</label>
-              <input
-                type="text"
-                placeholder="Entrez le lieu d'arrivée"
-                value={schedule[day].arrivalLocation}
-                onChange={(e) =>
-                  handleChange(day, "arrivalLocation", e.target.value)
-                }
-              />
-              {errors[day]?.arrivalLocation && (
-                <span className="error">{errors[day].arrivalLocation}</span>
-              )}
-            </div>
-            <button
-              className="search-button"
-              onClick={() => searchDrivers(day)}
-              disabled={loading[day]}
-            >
-              {loading[day]
-                ? "Recherche en cours..."
-                : "Rechercher des Chauffeurs"}
-            </button>
           </div>
         ))}
       </div>
+      <button className="save-button">Enregistrer</button>
     </div>
   );
 };
