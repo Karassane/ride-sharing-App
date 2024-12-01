@@ -1,63 +1,55 @@
-"use client"; // Add this line at the top
+"use client"; // Ensure client-side rendering
 
-import React, { useState } from "react";
+import React from "react";
 import "./ParametersMenu.css";
-import { FaBell, FaCog, FaGlobe, FaMoon, FaUser, FaEye, FaCommentDots, FaHandsHelping } from "react-icons/fa";
-
+import { FaHome,FaClock,FaRoute,FaDollarSign, FaCreditCard, FaTicketAlt, FaHandshake, FaUser, FaGift, FaBan, FaQuestionCircle, FaFileAlt, FaShieldAlt, FaCookieBite } from "react-icons/fa";
 const ParametersMenu = () => {
-  // Menu items for different sections
-  const settingsMenuItems = [
-    { label: "Supervision", icon: <FaCog />, onClick: () => alert("Supervision Clicked") },
-    { label: "Default audience settings", icon: <FaEye />, onClick: () => alert("Audience Settings Clicked") },
-    { label: "Reaction preferences", icon: <FaCommentDots />, onClick: () => alert("Reaction Preferences Clicked") },
-    { label: "Notifications", icon: <FaBell />, onClick: () => alert("Notifications Clicked") },
-    { label: "Accessibility", icon: <FaHandsHelping />, onClick: () => alert("Accessibility Clicked") },
-    { label: "Language and region", icon: <FaGlobe />, onClick: () => alert("Language & Region Clicked") },
-    { label: "Media", icon: <FaGlobe />, onClick: () => alert("Media Clicked") },
-    { label: "Dark mode", icon: <FaMoon />, onClick: () => alert("Dark Mode Clicked") },
-    { label: "Profile details", icon: <FaUser />, onClick: () => alert("Profile Details Clicked") },
-    { label: "How people can find and contact you", icon: <FaUser />, onClick: () => alert("Find & Contact Clicked") },
-  ];
 
-  const preferencesMenuItems = [
-    { label: "Notifications", icon: <FaBell />, onClick: () => alert("Notifications Clicked") },
-    { label: "Language settings", icon: <FaGlobe />, onClick: () => alert("Language Settings Clicked") },
-  ];
+const Vostrajets = [
+  { 
+    label: "Domicile -> Travail", 
+    icon: <FaHome />, // Home icon for "Domicile -> Travail"
+    onClick: () => alert("Domicile -> Travail Clicked") 
+  },
+  { 
+    label: "Horaires des covoiturages", 
+    icon: <FaClock />, // Clock icon for carpooling schedules
+    onClick: () => alert("Horaires des covoiturages Clicked") 
+  },
+  { 
+    label: "Récapitulatif de mes trajets", 
+    icon: <FaRoute />, // Route icon for trip summary
+    onClick: () => alert("Récapitulatif de mes trajets Clicked") 
+  },
+];
 
-  const Vostrajets = [
-    { label: "Domicile -> Travail", icon: <FaBell />, onClick: () => alert("Notifications Clicked") },
-    { label: "Horaires des covoiturages", icon: <FaGlobe />, onClick: () => alert("Language Settings Clicked") },
-    { label: "Récaputilatif de mes trajets", icon: <FaGlobe />, onClick: () => alert("Language Settings Clicked") },
-
-  ];
 
   const Preferences = [
-    { label: "Solde", icon: <FaBell />, onClick: () => alert("Notifications Clicked") },
-    { label: "Paiement et codes promo", icon: <FaGlobe />, onClick: () => alert("Language Settings Clicked") },
-    { label: "Passe Transport", icon: <FaGlobe />, onClick: () => alert("Language Settings Clicked") },
-    { label: "Parrainage", icon: <FaGlobe />, onClick: () => alert("Language Settings Clicked") },
-    { label: "Info personnelles", icon: <FaGlobe />, onClick: () => alert("Language Settings Clicked") },
-    { label: "Vos avantages", icon: <FaGlobe />, onClick: () => alert("Language Settings Clicked") },
-    { label: "Membres bloqués", icon: <FaGlobe />, onClick: () => alert("Language Settings Clicked") },
+    { label: "Solde", icon: <FaDollarSign />, onClick: () => alert("Solde Clicked") },
+    { label: "Paiement et codes promo", icon: <FaCreditCard />, onClick: () => alert("Paiement Clicked") },
+    { label: "Passe Transport", icon: <FaTicketAlt />, onClick: () => alert("Passe Transport Clicked") },
+    { label: "Parrainage", icon: <FaHandshake />, onClick: () => alert("Parrainage Clicked") },
+    { label: "Info personnelles", icon: <FaUser />, onClick: () => alert("Info Personnelles Clicked") },
+    { label: "Vos avantages", icon: <FaGift />, onClick: () => alert("Avantages Clicked") },
+    { label: "Membres bloqués", icon: <FaBan />, onClick: () => alert("Membres Bloqués Clicked") },
   ];
-
+  
   const Aide = [
-    { label: "Questions fréquentes", icon: <FaCog />, onClick: () => alert("Debug Tools Clicked") },
-    { label: "Conditions générales", icon: <FaCog />, onClick: () => alert("System Monitoring Clicked") },
-    { label: "Protection des données", icon: <FaCog />, onClick: () => alert("System Monitoring Clicked") },
-    { label: "Paramètres des cookies", icon: <FaCog />, onClick: () => alert("System Monitoring Clicked") },
+    { label: "Questions fréquentes", icon: <FaQuestionCircle />, onClick: () => alert("Questions Fréquentes Clicked") },
+    { label: "Conditions générales", icon: <FaFileAlt />, onClick: () => alert("Conditions Générales Clicked") },
+    { label: "Protection des données", icon: <FaShieldAlt />, onClick: () => alert("Protection des Données Clicked") },
+    { label: "Paramètres des cookies", icon: <FaCookieBite />, onClick: () => alert("Paramètres Cookies Clicked") },
   ];
 
   return (
-    <div className="settings-menu">
-      <div className="header">
-        <h3>Parametres</h3>
-      </div>
-      
-    
+    <div className="main-container">
+  <div className="settings-menu">
+    <div className="header">Parametres</div>
+
+    {/* Scrollable section */}
+    <div className="scroll-container">
       <div className="section">
-      <hr />
-      <h3 style={{ fontWeight: 'bold' }}>Vos trajets</h3>
+        <div className="header3">Vos trajets</div>
         <ul>
           {Vostrajets.map((item, index) => (
             <li key={index} className="menu-item" onClick={item.onClick}>
@@ -71,7 +63,7 @@ const ParametersMenu = () => {
       <hr />
 
       <div className="section">
-      <h3 style={{ fontWeight: 'bold' }}>Preferences</h3>
+        <div className="header3">Preferences</div>
         <ul>
           {Preferences.map((item, index) => (
             <li key={index} className="menu-item" onClick={item.onClick}>
@@ -81,9 +73,11 @@ const ParametersMenu = () => {
           ))}
         </ul>
       </div>
+
       <hr />
+
       <div className="section">
-      <h3 style={{ fontWeight: 'bold' }}>Aide</h3>
+        <div className="header3">Aide</div>
         <ul>
           {Aide.map((item, index) => (
             <li key={index} className="menu-item" onClick={item.onClick}>
@@ -94,6 +88,15 @@ const ParametersMenu = () => {
         </ul>
       </div>
     </div>
+  </div>
+
+  <div className="other-component">
+    {/* Add your other component here */}
+    <div className="header">Other Component</div>
+    <p>This is the second container.</p>
+  </div>
+</div>
+
   );
 };
 

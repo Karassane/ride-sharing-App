@@ -21,9 +21,9 @@ export default function page() {
       {/* <Hero /> */}
       <main className="main">
         <ParametersMenu />
-        <WeeklyCalendar />
+        <WeeklyCalendar/>
       </main>
-      <Footer4 />
+      
     </>
   );
 }
