@@ -5,6 +5,8 @@ import Reservation from "@/components/Reservation/Reservation";
 import MobailHeader1 from "@/components/headers/MobailHeader1";
 import WeeklyCalendar from "@/components/WeeklyCalendar/WeeklyCalendar";
 import ParametersMenu from "@/components/ParametersMenu/ParametersMenu";
+import Sidebar from "@/components/SidebarMenu/Script";
+
 
 export const metadata = {
   title:
@@ -20,7 +22,8 @@ export default function page() {
       <MobailHeader1 />
       {/* <Hero /> */}
       <main className="main">
-        <ParametersMenu />
+        <Sidebar/>
+        
         <WeeklyCalendar/>
       </main>
       
