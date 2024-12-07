@@ -14,33 +14,39 @@ const WeeklyCalendar = () => {
     "Dimanche",
   ];
 
+  // Initialiser l'état pour chaque jour, avec des contrôles séparés pour Domicile et Travail
   const initialState = daysOfWeek.reduce((acc, day) => {
     acc[day] = {
-      homeTime: "07:30",
-      workTime: "17:00",
-      active: true,
+      home: { time: "07:30", active: true },
+      work: { time: "17:00", active: true },
     };
     return acc;
   }, {});
 
   const [schedule, setSchedule] = useState(initialState);
 
-  const handleToggle = (day) => {
+  const handleToggle = (day, type) => {
     setSchedule({
       ...schedule,
       [day]: {
         ...schedule[day],
-        active: !schedule[day].active,
+        [type]: {
+          ...schedule[day][type],
+          active: !schedule[day][type].active,
+        },
       },
     });
   };
 
-  const handleTimeChange = (day, field, value) => {
+  const handleTimeChange = (day, type, value) => {
     setSchedule({
       ...schedule,
       [day]: {
         ...schedule[day],
-        [field]: value,
+        [type]: {
+          ...schedule[day][type],
+          time: value,
+        },
       },
     });
   };
@@ -81,35 +87,42 @@ const WeeklyCalendar = () => {
         {daysOfWeek.map((day) => (
           <div key={day} className="day-card">
             <h4>Chaque {day}</h4>
+            {/* Section Domicile */}
             <div className="time-row">
               <span>Domicile</span>
               <input
                 type="time"
-                value={schedule[day].homeTime}
-                onChange={(e) =>
-                  handleTimeChange(day, "homeTime", e.target.value)
-                }
-                disabled={!schedule[day].active}
+                value={schedule[day].home.time}
+                onChange={(e) => handleTimeChange(day, "home", e.target.value)}
+                disabled={!schedule[day].home.active}
               />
               <label className="toggle-switch">
                 <input
                   type="checkbox"
-                  checked={schedule[day].active}
-                  onChange={() => handleToggle(day)}
+                  checked={schedule[day].home.active}
+                  onChange={() => handleToggle(day, "home")}
                 />
                 <span className="slider"></span>
               </label>
             </div>
+
+            {/* Section Travail */}
             <div className="time-row">
               <span>Travail</span>
               <input
                 type="time"
-                value={schedule[day].workTime}
-                onChange={(e) =>
-                  handleTimeChange(day, "workTime", e.target.value)
-                }
-                disabled={!schedule[day].active}
+                value={schedule[day].work.time}
+                onChange={(e) => handleTimeChange(day, "work", e.target.value)}
+                disabled={!schedule[day].work.active}
               />
+              <label className="toggle-switch">
+                <input
+                  type="checkbox"
+                  checked={schedule[day].work.active}
+                  onChange={() => handleToggle(day, "work")}
+                />
+                <span className="slider"></span>
+              </label>
             </div>
           </div>
         ))}
