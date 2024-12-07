@@ -2,8 +2,8 @@
 
 import React from "react";
 import TripCard from "@/components/select-carpool/TripCard/TripCard";
-import Filters from "@/components/Filters/Filters";
-import FilterTabs from "@/components/FilterTabs/FilterTabs";
+import Filters from "@/components/select-carpool/Filters/Filters";
+import FilterTabs from "@/components/select-carpool/FilterTabs/FilterTabs";
 import TripSummary from "@/components/select-carpool/TripSummary/TripSummary";
 import { useRouter } from "next/navigation";
 
