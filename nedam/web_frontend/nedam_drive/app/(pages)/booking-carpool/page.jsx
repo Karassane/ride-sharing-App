@@ -1,9 +1,8 @@
 import Footer4 from "@/components/footers/Footer4";
 import Header4 from "@/components/headers/Header4";
-import Hero from "@/components/homes/home-10/Hero";
-import Reservation from "@/components/Reservation/Reservation";
+import Reservation from "@/components/booking-carpool/Reservation/Reservation";
 import MobailHeader1 from "@/components/headers/MobailHeader1";
-import WeeklyCalendar from "@/components/WeeklyCalendar/WeeklyCalendar";
+import WeeklyCalendar from "@/components/booking-carpool/WeeklyCalendar/WeeklyCalendar";
 
 export const metadata = {
   title:

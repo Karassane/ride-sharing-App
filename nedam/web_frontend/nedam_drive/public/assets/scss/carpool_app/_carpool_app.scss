@@ -1,0 +1,66 @@
+// SCSS de la page carpool-selection :
+
+.main_carpool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Place le contenu en haut */
+  padding: 20px;
+  background-color: #f2f5f9; /* Couleur d'arrière-plan */
+  height: 100%; /* S'adapte à la hauteur de l'écran */
+  width: 100%;
+}
+
+.search-section {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centre le composant */
+  margin-bottom: 2rem;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  width: 80%; /* Hero occupe 80% de la largeur */
+  max-width: 1200px; /* Optionnel : limite la largeur maximale */
+  margin: 0 auto; /* Centre le composant dans la page */
+}
+
+.hero-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 100%; /* Définit la largeur maximale de Hero à 80% */
+  margin: 0 auto; /* Centre Hero horizontalement */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+
+  .filters-wrapper {
+    flex: 1;
+    max-width: 25%; /* Limite la largeur à 25% */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-content-wrapper {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .tabs-wrapper {
+      width: 100%; /* Assure que les tabs occupent toute la largeur de la section */
+    }
+
+    .summary-wrapper {
+      width: 100%;
+    }
+
+    .trips-wrapper {
+      width: 100%; /* Assure que les tabs occupent toute la largeur de la section */
+    }
+  }
+}

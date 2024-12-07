@@ -10,13 +10,13 @@ export default function Hero() {
   const handleHorizontalSearch = (searchParams) => {
     // Exemple de redirection dynamique
     router.push(
-      `/carpool-selection?from=${searchParams.from}&to=${searchParams.to}&date=${searchParams.date}&passengers=${searchParams.passengers}`
+      `/select-carpool?from=${searchParams.from}&to=${searchParams.to}&date=${searchParams.date}&passengers=${searchParams.passengers}`
     );
   };
 
   const handleVerticalSearch = (searchParams) => {
     router.push(
-      `/carpool-selection?from=${searchParams.from}&to=${searchParams.to}&date=${searchParams.date}&passengers=${searchParams.passengers}`
+      `/select-carpool?from=${searchParams.from}&to=${searchParams.to}&date=${searchParams.date}&passengers=${searchParams.passengers}`
     );
   };
 

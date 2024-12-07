@@ -11,7 +11,7 @@ export default function Hero({ tabs }) {
   const router = useRouter();
 
   const handleTripCardClick = () => {
-    router.push("/carpool-reservation");
+    router.push("/booking-carpool");
   };
 
   return (

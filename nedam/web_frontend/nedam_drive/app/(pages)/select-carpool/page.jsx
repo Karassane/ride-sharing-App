@@ -1,7 +1,7 @@
 import Footer4 from "@/components/footers/Footer4";
 import Header4 from "@/components/headers/Header4";
 import HorizontalSearchBar from "@/components/HorizontalSearchBar/HorizontalSearchBar";
-import Hero from "@/components/homes/home-10/Hero";
+import Hero from "@/components/select-carpool/Hero";
 import MobailHeader1 from "@/components/headers/MobailHeader1";
 
 export const metadata = {
@@ -30,25 +30,19 @@ export default function Page() {
 
   return (
     <>
-      {/* Header Section */}
       <Header4 />
       <MobailHeader1 />
 
-      {/* Main Content */}
       <main className="main_carpool">
-        {/* Search Section */}
         <section className="search-section">
           <HorizontalSearchBar />
         </section>
-
-        {/* Hero Section */}
         <section className="hero-section">
           {/* Passez `tabs` en tant que prop au Hero */}
           <Hero tabs={tabs} />
         </section>
       </main>
 
-      {/* Footer Section */}
       <Footer4 />
     </>
   );
