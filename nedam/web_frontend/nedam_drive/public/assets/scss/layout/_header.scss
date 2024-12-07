@@ -779,6 +779,9 @@
   // header-nav
   //*****************************
   .header-nav {
+    .main-menu li {
+      border-color: transparent !important; // Supprime les bordures visibles
+    }
     .main-menu li a {
       font-weight: bold;
       font-size: 16px;
@@ -919,4 +922,10 @@
       filter: invert(1);
     }
   }
+}
+
+//###################### HeaderSelectCarpool #########################//
+
+.HeaderSelectCarpool {
+  @extend .header4-custom;
 }

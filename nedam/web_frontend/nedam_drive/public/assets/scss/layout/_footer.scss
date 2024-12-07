@@ -13,6 +13,7 @@
     li {
       list-style: none;
       margin-bottom: 8px;
+      border-color: transparent !important;
       a {
         color: $color-white;
         font-size: $font-sm;
@@ -162,6 +163,7 @@
   li {
     display: inline-block;
     color: $color-white;
+    border-color: transparent;
     padding: 0px 15px;
     a {
       color: $color-white;

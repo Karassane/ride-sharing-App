@@ -16,7 +16,11 @@ export const menuItems = [
       { id: 20, title: "Homepage 10", link: "/home-10" },
       { id: 21, title: "nedam drive 2nd", link: "/nedam-drive-2nd" },
       { id: 22, title: "Carpool Reservation", link: "/carpool-reservation" },
-      { id: 23, title: "nedam Drive Mainpage", link: "/daily-reservation-main" },
+      {
+        id: 23,
+        title: "nedam Drive Mainpage",
+        link: "/daily-reservation-main",
+      },
     ],
   },
   // {
