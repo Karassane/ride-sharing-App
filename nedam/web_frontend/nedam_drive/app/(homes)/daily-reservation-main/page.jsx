@@ -6,6 +6,7 @@ import MobailHeader1 from "@/components/headers/MobailHeader1";
 import WeeklyCalendar from "@/components/WeeklyCalendar/WeeklyCalendar";
 import ParametersMenu from "@/components/ParametersMenu/ParametersMenu";
 import Sidebar from "@/components/SidebarMenu/Script";
+import Trajects from "@/components/Trajects/Trajects";
 
 
 export const metadata = {
@@ -23,8 +24,7 @@ export default function page() {
       {/* <Hero /> */}
       <main className="main">
         <Sidebar/>
-        
-        <WeeklyCalendar/>
+        <Trajects/>
       </main>
       
     </>
