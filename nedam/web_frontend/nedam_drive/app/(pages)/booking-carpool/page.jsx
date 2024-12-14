@@ -12,10 +12,12 @@ export const metadata = {
 };
 
 export default function page() {
-  const driverInfo = {
-    avatar: "https://example.com/driver-avatar.jpg",
+  const driverData = {
+    avatar: null,
     name: "zdek",
     rating: 4.3,
+    reviews: 4,
+    carModel: "Volkswagen Voyage - Gris",
   };
 
   return (
@@ -26,9 +28,7 @@ export default function page() {
       <main className="main">
         <Reservation />
         <RideInfoComponent />
-        <div className="driver-info-container">
-          <DriverInfoComponent driver={driverInfo} />
-        </div>
+        <DriverInfoComponent driver={driverData} />
       </main>
       <Footer4 />
     </>
