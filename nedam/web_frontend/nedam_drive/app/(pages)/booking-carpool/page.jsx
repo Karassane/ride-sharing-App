@@ -24,11 +24,20 @@ export default function page() {
     <>
       <Header />
       <MobailHeader1 />
-      {/* <Hero /> */}
       <main className="main">
-        <Reservation />
-        <RideInfoComponent />
-        <DriverInfoComponent driver={driverData} />
+        {/* Le styles dans carpool_app.scss ! */}
+        <div className="page-layout">
+          {/* Section gauche */}
+          <div className="left-column">
+            <Reservation />
+            <DriverInfoComponent driver={driverData} />
+          </div>
+
+          {/* Section droite */}
+          <div className="right-column">
+            <RideInfoComponent />
+          </div>
+        </div>
       </main>
       <Footer4 />
     </>
