@@ -98,7 +98,8 @@ TABLE CONTENT
   "pages/homepage8", "pages/homepage9", "pages/homepage10", "pages/fleet",
   "pages/services", "pages/about", "pages/contact", "pages/team-single",
   "pages/pricing", "pages/login", "pages/comingsoon", "pages/invoice",
-  "pages/booking", "pages/blog-list", "pages/booking_carpool";
+  "pages/booking", "pages/blog-list", "pages/select_carpool",
+  "pages/booking_carpool";
 
 // ----------------------------
 // Responsive styles
@@ -134,4 +135,3 @@ TABLE CONTENT
 
 @import "./custom.scss";
 @import "hero/hero";
-@import "carpool_app/carpool_app";
