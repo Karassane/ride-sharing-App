@@ -15,11 +15,6 @@ export const menuItems = [
       { id: 19, title: "Homepage 9", link: "/home-9" },
       { id: 20, title: "Homepage 10", link: "/home-10" },
       { id: 21, title: "nedam drive 2nd", link: "/nedam-drive-2nd" },
-<<<<<<< HEAD
-=======
-      { id: 22, title: "Carpool Reservation", link: "/carpool-reservation" },
-      { id: 23, title: "nedam Drive Mainpage", link: "/daily-reservation-main" },
->>>>>>> test_merge
     ],
   },
   // {
