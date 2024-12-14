@@ -55,3 +55,81 @@
     background: #e3e3e3;
     border-radius: 5px;
 }
+.custom-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-gap: 24px; /* Space between grid items */
+    padding: 16px; /* Padding around the grid */
+    max-width: 1200px; /* Set max width to control overall container size */
+    width: 80%; /* Set a percentage width or use fixed pixels (e.g., 1000px) */
+    height: 600px; /* Fixed height for the container (adjust as needed) */
+    margin: 0 auto; /* Centers the container horizontally */
+    position: relative; /* Allows positioning of child elements if needed */
+    top: 0px; /* Adjust the vertical position */
+    left: 50%; /* Moves the container to the right */
+    transform: translateX(-50%); /* Ensures the container is perfectly centered horizontally */
+}
+
+
+.grid-item {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px; /* Increased padding for larger items */
+    text-align: center;
+}
+  
+  .collapse-box {
+    cursor: pointer;
+    background-color: #f9f9f9;
+  }
+  
+  .time-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+  }
+  
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+  }
+  
+  .toggle-switch input {
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(14px);
+  }
+  

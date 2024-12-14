@@ -1,7 +1,7 @@
 "use client"; // Ensure client-side rendering
 import React, { useState } from "react";
 import "./Trajects.css"; // Import the CSS file
-import "../WeeklyCalendar/WeeklyCalendar.css"
+import "../WeeklyCalendar/WeeklyCalendar.css";
 
 const Trajects = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -55,53 +55,57 @@ const Trajects = () => {
 
       {isExpanded && (
         <div className="expanded-box">
-          <div className="weekly-calendar">
-            <h2>Calendrier Hebdomadaire</h2>
-            <div className="calendar-container">
-              {daysOfWeek.map((day) => (
-                <div key={day} className="day-card">
-                  <h4>Chaque {day}</h4>
-
-                  {/* Section Domicile */}
-                  <div className="time-row">
-                    <span>Domicile</span>
-                    <input
-                      type="time"
-                      value={schedule[day].home.time}
-                      onChange={(e) => handleTimeChange(day, 'home', e.target.value)}
-                      disabled={!schedule[day].home.active}
-                    />
-                    <label className="toggle-switch">
-                      <input
-                        type="checkbox"
-                        checked={schedule[day].home.active}
-                        onChange={() => handleToggle(day, 'home')}
-                      />
-                      <span className="slider"></span>
-                    </label>
-                  </div>
-
-                  {/* Section Travail */}
-                  <div className="time-row">
-                    <span>Travail</span>
-                    <input
-                      type="time"
-                      value={schedule[day].work.time}
-                      onChange={(e) => handleTimeChange(day, 'work', e.target.value)}
-                      disabled={!schedule[day].work.active}
-                    />
-                    <label className="toggle-switch">
-                      <input
-                        type="checkbox"
-                        checked={schedule[day].work.active}
-                        onChange={() => handleToggle(day, 'work')}
-                      />
-                      <span className="slider"></span>
-                    </label>
-                  </div>
-                </div>
-              ))}
+          <div className="custom-grid-container">
+            {/* First grid cell with the toggle box */}
+            <div className="grid-item collapse-box" onClick={toggleBox}>
+              <img src="path-image.jpg" alt="Collapse" className="box-image" />
+              <h4 className="box-text">Collapse</h4>
             </div>
+
+            {/* Other grid cells for each day */}
+            {daysOfWeek.map((day) => (
+              <div key={day} className="grid-item">
+                <h4>{day}</h4>
+
+                {/* Section Domicile */}
+                <div className="time-row">
+                  <span>Domicile</span>
+                  <input
+                    type="time"
+                    value={schedule[day].home.time}
+                    onChange={(e) => handleTimeChange(day, 'home', e.target.value)}
+                    disabled={!schedule[day].home.active}
+                  />
+                  <label className="toggle-switch">
+                    <input
+                      type="checkbox"
+                      checked={schedule[day].home.active}
+                      onChange={() => handleToggle(day, 'home')}
+                    />
+                    <span className="slider"></span>
+                  </label>
+                </div>
+
+                {/* Section Travail */}
+                <div className="time-row">
+                  <span>Travail</span>
+                  <input
+                    type="time"
+                    value={schedule[day].work.time}
+                    onChange={(e) => handleTimeChange(day, 'work', e.target.value)}
+                    disabled={!schedule[day].work.active}
+                  />
+                  <label className="toggle-switch">
+                    <input
+                      type="checkbox"
+                      checked={schedule[day].work.active}
+                      onChange={() => handleToggle(day, 'work')}
+                    />
+                    <span className="slider"></span>
+                  </label>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       )}
