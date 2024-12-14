@@ -10,7 +10,7 @@ const DriverInfoComponent = ({ driver }) => {
   const [isModalOpen, setModalOpen] = useState(false); // État pour le modal
 
   const handleRedirect = () => {
-    router.push("/driver_page"); // Redirection vers la page driver_page
+    router.push("/driver-page"); // Redirection vers la page driver_page
   };
 
   const handleContactClick = () => {

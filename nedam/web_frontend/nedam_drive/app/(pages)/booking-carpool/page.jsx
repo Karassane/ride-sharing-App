@@ -14,8 +14,8 @@ export const metadata = {
 export default function page() {
   const driverData = {
     avatar: null,
-    name: "zdek",
-    rating: 4.3,
+    name: "Fares",
+    rating: 4.9,
     reviews: 4,
     carModel: "Volkswagen Voyage - Gris",
   };
