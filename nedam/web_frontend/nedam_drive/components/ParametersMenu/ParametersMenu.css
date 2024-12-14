@@ -1,0 +1,134 @@
+/* Main container for both components */
+.main-container {
+  display: flex; /* Enable flexbox for side-by-side layout */
+  gap: 20px; /* Add space between the containers */
+}
+
+/* Styles for the settings menu */
+.settings-menu {
+  width: 420px; /* Maintain original width */
+  max-height: 950px; /* Limit total height */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: auto; /* Allow scrolling if content exceeds the max-height */
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles for both components */
+.settings-menu .header,
+.other-component .header {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 20px; /* Updated font size */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Specific header for settings menu */
+.settings-menu .header {
+  padding: 1rem;
+  color: rgb(8, 8, 9);
+  font-size: 48px; /* Larger font size for emphasis */
+  line-height: 42px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Secondary headers */
+.header3 {
+  font-family: "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 1000;
+  color: rgb(8, 8, 9);
+  font-size: 32px;
+  line-height: 34px;
+  margin-bottom: 0.5rem;
+  margin-left: 20px;
+}
+
+/* Scrollable container */
+.scroll-container {
+  max-height: 790px; /* Adjust as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 1rem;
+  scrollbar-width: thin; /* For Firefox */
+}
+
+/* Scrollbar styles */
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #bbb;
+}
+
+/* Section styling */
+.section {
+  margin-bottom: 1rem;
+}
+
+.section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Menu items */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #e6e6e6;
+}
+
+/* Styles for the other component */
+.other-component {
+  width: 50%; /* Adjust width as needed */
+  max-height: 950px; /* Match height to the settings menu for consistency */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+.other-component h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.other-component .save-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.other-component .save-button:hover {
+  background-color: #0056b3;
+}

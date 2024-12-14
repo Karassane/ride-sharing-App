@@ -1,0 +1,133 @@
+/* Container for the box */
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #151A2D;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transition all properties smoothly */
+
+    position: absolute; /* Absolute positioning to control position explicitly */
+    top: 50%;           /* 50% from the top of the nearest positioned ancestor */
+    left: 50%;          /* 50% from the left of the nearest positioned ancestor */
+    transform: translate(-50%, -50%); /* Centers the box both horizontally and vertically */
+}
+
+/* When hovering over the box */
+.box:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Increase shadow for visual effect */
+    /* Removed scale effect to prevent box size changes and cursor movement */
+}
+
+/* Image inside the box */
+.box-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Text inside the box */
+.box-text {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Container for the expanded box with the items */
+.expanded-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Each item inside the expanded box */
+.item {
+    padding: 10px;
+    margin: 5px 0;
+    background: #e3e3e3;
+    border-radius: 5px;
+}
+.custom-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-gap: 24px; /* Space between grid items */
+    padding: 16px; /* Padding around the grid */
+    max-width: 1200px; /* Set max width to control overall container size */
+    width: 80%; /* Set a percentage width or use fixed pixels (e.g., 1000px) */
+    height: 600px; /* Fixed height for the container (adjust as needed) */
+    margin: 0 auto; /* Centers the container horizontally */
+    position: relative; /* Allows positioning of child elements if needed */
+    top: 0px; /* Adjust the vertical position */
+    left: 50%; /* Moves the container to the right */
+    transform: translateX(-50%); /* Ensures the container is perfectly centered horizontally */
+}
+.grid-item {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px; /* Increased padding for larger items */
+    text-align: center;
+}
+  
+  .collapse-box {
+    cursor: pointer;
+    background-color: #f9f9f9;
+  }
+  
+  .time-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+  }
+  
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+  }
+  
+  .toggle-switch input {
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(14px);
+  }
+  

@@ -1,0 +1,122 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
+import "./style.css"; // Make sure your CSS includes styles for Material Icons.
+
+const Sidebar = () => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isMenuActive, setIsMenuActive] = useState(false);
+  const [sidebarHeight, setSidebarHeight] = useState("calc(100vh - 32px)");
+
+  const toggleSidebar = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuActive(!isMenuActive);
+    setSidebarHeight(
+      !isMenuActive ? `${document.querySelector(".sidebar").scrollHeight}px` : "56px"
+    );
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setSidebarHeight("calc(100vh - 32px)");
+      } else {
+        setIsCollapsed(false);
+        setSidebarHeight("auto");
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
+    <aside
+      className={`sidebar ${isCollapsed ? "collapsed" : ""} ${
+        isMenuActive ? "menu-active" : ""
+      }`}
+      style={{ height: sidebarHeight }}
+    >
+      <header className="sidebar-header">
+        <a href="#" className="header-logo">
+          <img src="logo.png" alt="CodingNepal" />
+        </a>
+        <button className="toggler sidebar-toggler" onClick={toggleSidebar}>
+          <span className="material-symbols-rounded">chevron_left</span>
+        </button>
+        <button className="toggler menu-toggler" onClick={toggleMenu}>
+          <span className="material-symbols-rounded">
+            {isMenuActive ? "close" : "menu"}
+          </span>
+        </button>
+      </header>
+
+      <nav className="sidebar-nav">
+        <ul className="nav-list primary-nav">
+          <li className="nav-item">
+            <a href="#" className="nav-link">
+              <span className="nav-icon material-symbols-rounded">dashboard</span>
+              <span className="nav-label">Dashboard</span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#" className="nav-link">
+              <span className="nav-icon material-symbols-rounded">calendar_today</span>
+              <span className="nav-label">Calendar</span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#" className="nav-link">
+              <span className="nav-icon material-symbols-rounded">notifications</span>
+              <span className="nav-label">Notifications</span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#" className="nav-link">
+              <span className="nav-icon material-symbols-rounded">group</span>
+              <span className="nav-label">Team</span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#" className="nav-link">
+              <span className="nav-icon material-symbols-rounded">insert_chart</span>
+              <span className="nav-label">Analytics</span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#" className="nav-link">
+              <span className="nav-icon material-symbols-rounded">star</span>
+              <span className="nav-label">Bookmarks</span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#" className="nav-link">
+              <span className="nav-icon material-symbols-rounded">settings</span>
+              <span className="nav-label">Settings</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul className="nav-list secondary-nav">
+          <li className="nav-item">
+            <a href="#" className="nav-link">
+              <span className="nav-icon material-symbols-rounded">account_circle</span>
+              <span className="nav-label">Profile</span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#" className="nav-link">
+              <span className="nav-icon material-symbols-rounded">logout</span>
+              <span className="nav-label">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  );
+};
+
+export default Sidebar;
