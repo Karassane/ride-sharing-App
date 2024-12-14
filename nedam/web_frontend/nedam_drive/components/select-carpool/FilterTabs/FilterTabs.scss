@@ -1,0 +1,55 @@
+.filter-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff; /* Couleur légèrement grisée */
+  border-radius: 12px; /* Réduit la bordure pour un look plus moderne */
+  padding: 8px 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Ombre plus douce */
+  font-family: Arial, sans-serif;
+  width: 100%; /* Définit que le composant occupe 80% de la largeur */
+
+  .tab {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Aligne verticalement les éléments */
+    justify-content: center; /* Centre les éléments horizontalement */
+    text-align: center;
+    gap: 8px; /* Espace entre les éléments (icône, texte, numéro) */
+    padding: 12px 0;
+    font-size: 15px; /* Taille légèrement augmentée */
+    color: #6c757d; /* Couleur neutre */
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+      color: #007bff; /* Bleu vif pour le tab actif */
+      font-weight: bold;
+      border-bottom: 3px solid #007bff; /* Bordure bleue */
+      background-color: #e9f4ff; /* Légère couleur de fond pour activer */
+      border-radius: 8px; /* Ajout de coins arrondis au tab actif */
+    }
+
+    &:hover {
+      color: #0056b3; /* Couleur légèrement plus foncée au survol */
+      background-color: #f0f8ff; /* Couleur de fond sur hover */
+      border-radius: 8px; /* Coins arrondis au survol */
+    }
+
+    .icon {
+      font-size: 22px; /* Taille légèrement agrandie */
+      color: inherit; /* Hérite de la couleur de l'onglet */
+    }
+
+    .label {
+      font-size: 14px; /* Ajusté pour une meilleure lisibilité */
+      color: inherit;
+    }
+
+    .count {
+      font-size: 14px;
+      color: inherit;
+    }
+  }
+}

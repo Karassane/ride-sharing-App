@@ -1,0 +1,209 @@
+.box-search-ride-style-3 {
+  position: relative;
+  bottom: auto;
+  right: auto;
+  max-width: 470px;
+  margin: 0px;
+  border-radius: 0px;
+  background: no-repeat;
+  .box-form-search {
+    display: inline-block;
+    width: 100%;
+  }
+  .search-item {
+    background-color: $background-white;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    padding: 10px;
+    .search-icon {
+      /* Your existing styles */
+    }
+
+    .item-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgb(221, 17, 17); // Red color for visibility
+    }
+
+    .passenger-count {
+      color: black;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .search-button {
+    padding: 0px;
+    min-width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    .btn-search {
+      width: 100%;
+      padding: 19px;
+      border-radius: 6px;
+      background-color: $color-primary;
+    }
+  }
+  .search-passengers {
+    display: flex;
+    align-items: center;
+  }
+
+  .passenger-controls {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Space between label and buttons */
+  }
+
+  .passenger-controls.passenger-btn {
+    background-color: #f50b0b; /* Adjust color as needed */
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+}
+
+.box-header-home4 {
+  padding: 0px 60px;
+}
+.banner-home-4 {
+  background-image: url(/assets/imgs/page/homepage4/volvo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh; /* 100% of the viewport height */
+
+  position: relative;
+}
+
+.banner-driver {
+  background-image: url(/assets/imgs/page/driver/driver_1.webp) !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh; /* 100% of the viewport height */
+
+  position: relative;
+
+  .heading-52-medium {
+    color: #ffffff !important;
+    font-size: 80px !important;
+    margin-left: 20px;
+  }
+
+  .text-16 {
+    color: #ffffff !important;
+    font-size: 40px !important;
+    margin-left: 20px;
+  }
+}
+
+.banner-daily {
+  background-image: url(/assets/imgs/page/daily/algeria_1.jpg) !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh; /* 100% of the viewport height */
+
+  position: relative;
+
+  .heading-52-medium {
+    color: #fcf9f9 !important;
+    font-size: 80px !important;
+    margin-left: 20px;
+  }
+
+  .text-16 {
+    color: #fefffe !important;
+    font-size: 40px !important;
+    margin-left: 20px;
+  }
+}
+
+.banner-carpooling {
+  background-image: url(/assets/imgs/page/carpooling/algeria_2.jpg) !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh; /* 100% of the viewport height */
+  position: relative;
+  .heading-52-medium {
+    color: #ffffff !important;
+    font-size: 40px !important;
+    margin-left: 20px;
+    position: absolute;
+    margin-top: 40px;
+  }
+  .heading-52-large {
+    color: #ffffff !important;
+    font-size: 60px !important;
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+  .text-16 {
+    color: #ffffff !important;
+    font-size: 20px !important;
+    margin-left: 20px;
+    position: absolute;
+  }
+}
+
+.box-banner-homepage-4 {
+  position: absolute; /* Permet un positionnement libre à l'intérieur de .banner-home-4 */
+  top: 80px; /* Ajustez selon la hauteur souhaitée */
+  left: 20px; /* Ajustez selon la position à gauche souhaitée */
+  color: #fff; /* Par exemple, mettez la couleur du texte en blanc pour contraster avec l'image */
+}
+
+.gallery-home-4 {
+  .box-image-1 {
+    text-align: right;
+    padding-right: 20px;
+    max-width: 240px;
+  }
+  .box-image-bottom img {
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+}
+.list-ticks-style-2 {
+  li {
+    &::before {
+      background-image: url(/assets/imgs/page/homepage4/tick.png);
+    }
+  }
+}
+.box-list-how-2 {
+  ul li.has-arrow {
+    background-position: right 60px top 59%;
+  }
+}
+.bg-our-fleet-3 {
+  background-color: $color-primary;
+  background-image: url(/assets/imgs/page/homepage4/pattern.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: auto;
+}
+.box-button-download-white {
+  .btn.btn-download {
+    background-color: $background-white;
+    .inner-download {
+      .icon-download {
+        &::before {
+          background-color: $color-border;
+        }
+      }
+      .info-download span {
+        color: $color-text;
+      }
+    }
+  }
+}

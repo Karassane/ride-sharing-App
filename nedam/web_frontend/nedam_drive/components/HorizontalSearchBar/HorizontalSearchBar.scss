@@ -1,0 +1,78 @@
+.horizontal-search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #b7d8ad;
+  border-radius: 10px;
+  padding: 10px 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  width: 80%; /* Définit que le composant occupe 80% de la largeur de la section */
+  max-width: 1200px; /* Optionnel : limite la largeur maximale pour grands écrans */
+  margin: 0 auto; /* Centre horizontalement */
+  gap: 1%;
+
+  .search-item {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 8px;
+    flex-basis: 18%; /* Chaque champ occupe 18% de la largeur totale */
+    max-width: 18%; /* Garantit que les champs ne dépassent pas leur largeur */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+
+    .icon {
+      font-size: 18px;
+      margin-right: 8px; /* Espacement entre l'icône et l'input */
+      color: #6c757d;
+    }
+
+    input {
+      border: none;
+      outline: none;
+      font-size: 14px;
+      color: #1d3557;
+      width: 100%;
+      background: transparent;
+
+      &::placeholder {
+        color: #a5a5a5;
+        font-weight: normal;
+      }
+      /* Toujours afficher les flèches */
+      &[type="number"]::-webkit-inner-spin-button,
+      &[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: auto;
+        appearance: auto;
+        display: block; /* Force l'affichage en permanence */
+        color: #000; /* Assure que les flèches sont noires */
+        opacity: 1; /* Assure que les flèches sont visibles */
+        pointer-events: all; /* Permet d'interagir avec les flèches */
+      }
+
+      &[type="number"] {
+        -moz-appearance: textfield;
+        appearance: textfield;
+      }
+    }
+  }
+
+  .search-button {
+    background-color: #ff5722;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px; /* Ajuste la taille du bouton */
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    flex-basis: 18%; /* Le bouton occupe également 18% de la largeur */
+    max-width: 18%; /* Garantit que le bouton respecte la largeur définie */
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #e90606;
+    }
+  }
+}

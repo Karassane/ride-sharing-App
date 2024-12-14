@@ -1,0 +1,52 @@
+.passenger-stepper {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+
+  .stepper-btn {
+    width: 40px; // Largeur du bouton
+    height: 30px; // Hauteur du bouton
+    background-color: #ff5252;
+    // border: none;
+    border: 1px solid #ffffff;
+    border-radius: 0; // Pas d'arrondi sur les coins pour un effet rectangulaire
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #000000; // Couleur de fond au survol
+    }
+
+    &:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+  }
+
+  .stepper-btn:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+
+  .stepper-btn:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  /* Ajouter une ligne de séparation entre les boutons */
+  .stepper-btn:first-child::after {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: #cccccc; // Couleur de la ligne de séparation
+    position: absolute;
+    right: -1px;
+    top: 0;
+  }
+}

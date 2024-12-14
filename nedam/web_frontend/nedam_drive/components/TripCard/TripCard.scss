@@ -1,0 +1,199 @@
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f5f9;
+  padding: 60px;
+}
+
+.trip-card {
+  max-width: 1000px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 25px;
+  font-family: Arial, sans-serif;
+
+  .trip-date {
+    h2 {
+      font-size: 1.4em;
+      color: #1d3557;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 0.9em;
+      color: #6c757d;
+      margin: 0;
+    }
+    margin-bottom: 15px;
+  }
+
+  .trip-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+
+    .trip-schedule {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .schedule-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .time {
+          font-size: 1.2em;
+          font-weight: bold;
+          color: #1d3557;
+        }
+
+        .line-container {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 200px; /* Augmentez légèrement pour plus d'espace entre les lignes */
+
+          .line {
+            flex: 1;
+            height: 2px;
+            background-color: #eb6309;
+            position: relative;
+            margin: 0 25px; /* Ajoutez un espacement horizontal plus large pour espacer davantage les lignes */
+          }
+
+          .line::before,
+          .line::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background-color: #eb6309;
+            border-radius: 50%;
+          }
+
+          .line:first-of-type::before {
+            position: absolute;
+            top: -3px;
+          }
+
+          .line:last-of-type::after {
+            position: absolute;
+            right: -8px; /* Décalage pour mieux aligner le cercle droit */
+            top: -3px;
+          }
+
+          .duration {
+            position: absolute;
+            top: -10px; /* Position légèrement plus haute */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.85em;
+            color: #000000;
+            background-color: transparent;
+            padding: 0 5px;
+            font-weight: bold;
+          }
+        }
+
+        .schedule-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+          .time {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #1d3557;
+            margin: 0 8px; /* Ajout d'espace autour des heures */
+          }
+        }
+      }
+
+      .schedule-bottom {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 5px;
+
+        span {
+          font-size: 0.9em;
+          color: #1d3557;
+        }
+      }
+    }
+
+    .trip-price {
+      font-size: 2em;
+      font-weight: bold;
+      color: #1d3557;
+      margin-left: 20px;
+
+      /* Nouvelle règle pour aligner avec le texte "Demain" */
+      align-self: flex-start; /* Aligne le prix en haut */
+      margin-top: -75px; /* Ajustez cette valeur pour un positionnement parfait */
+    }
+  }
+
+  .driver-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .car-icon {
+      margin-right: 10px;
+      width: 24px;
+      height: 24px;
+    }
+
+    .driver-avatar {
+      border: 2px solid #1d3557;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+
+    .driver-info {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .driver-name {
+        font-size: 1em;
+        font-weight: bold;
+        color: #1d3557;
+        margin: 0;
+      }
+
+      .rating {
+        font-size: 0.9em;
+        color: #eb6309;
+      }
+
+      .badge {
+        background-color: #9ecbf0;
+        color: #1d3557;
+        border-radius: 5px;
+        padding: 2px 8px;
+        font-size: 0.8em;
+      }
+    }
+
+    .instant-booking {
+      display: flex;
+      align-items: center;
+      color: #1d3557;
+      font-size: 0.9em;
+      margin-left: auto;
+    }
+  }
+}

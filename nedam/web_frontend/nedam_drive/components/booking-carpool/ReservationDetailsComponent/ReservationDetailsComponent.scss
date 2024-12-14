@@ -1,0 +1,32 @@
+.reservation-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  .price {
+    h2 {
+      font-size: 24px;
+      color: #000;
+    }
+
+    p {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+
+  .reservation-button {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
