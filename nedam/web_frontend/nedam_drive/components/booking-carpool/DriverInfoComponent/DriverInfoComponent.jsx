@@ -1,14 +1,26 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation"; // Utiliser useRouter pour la navigation
+import Modal from "@/components/common/Modal/Modal";
 import "./DriverInfoComponent.scss";
 
 const DriverInfoComponent = ({ driver }) => {
   const router = useRouter();
+  const [isModalOpen, setModalOpen] = useState(false); // État pour le modal
 
   const handleRedirect = () => {
     router.push("/driver_page"); // Redirection vers la page driver_page
+  };
+
+  const handleContactClick = () => {
+    console.log("Bouton cliqué");
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    console.log("Modal fermé");
+    setModalOpen(false);
   };
 
   return (
@@ -54,10 +66,22 @@ const DriverInfoComponent = ({ driver }) => {
         </p>
       </div>
 
-      <button className="contact-driver-button">
+      <button className="contact-driver-button" onClick={handleContactClick}>
         <span className="icon">💬</span> Contacter{" "}
         {driver?.name || "le conducteur"}
       </button>
+
+      {/* Modal */}
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+        <h2>Contacter {driver?.name}</h2>
+        <p>Veuillez entrer votre message pour contacter le conducteur.</p>
+        <textarea
+          rows="4"
+          cols="50"
+          placeholder="Écrivez votre message ici..."
+        ></textarea>
+        <button onClick={handleCloseModal}>Envoyer</button>
+      </Modal>
     </div>
   );
 };
