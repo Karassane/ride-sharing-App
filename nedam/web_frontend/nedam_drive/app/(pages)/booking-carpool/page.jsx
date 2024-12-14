@@ -12,22 +12,31 @@ export const metadata = {
 };
 
 export default function page() {
-  const driverInfo = {
-    avatar: "https://example.com/driver-avatar.jpg",
-    name: "zdek",
-    rating: 4.3,
+  const driverData = {
+    avatar: null,
+    name: "Fares",
+    rating: 4.9,
+    reviews: 4,
+    carModel: "Volkswagen Voyage - Gris",
   };
 
   return (
     <>
       <Header />
       <MobailHeader1 />
-      {/* <Hero /> */}
       <main className="main">
-        <Reservation />
-        <RideInfoComponent />
-        <div className="driver-info-container">
-          <DriverInfoComponent driver={driverInfo} />
+        {/* Le styles dans carpool_app.scss ! */}
+        <div className="page-layout">
+          {/* Section gauche */}
+          <div className="left-column">
+            <Reservation />
+            <DriverInfoComponent driver={driverData} />
+          </div>
+
+          {/* Section droite */}
+          <div className="right-column">
+            <RideInfoComponent />
+          </div>
         </div>
       </main>
       <Footer4 />

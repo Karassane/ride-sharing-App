@@ -1,54 +1,114 @@
 .driver-info-component {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   width: 100%;
-  max-width: 800px;
+  max-width: 600px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+  color: #333;
 
-  .driver-details {
+  .driver-header {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 
-    img {
-      width: 40px;
-      height: 40px;
+    &:hover {
+      background-color: #f9f9f9; // Survol interactif
+    }
+
+    .driver-avatar {
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
-      margin-right: 12px;
+      overflow: hidden;
+      margin-right: 16px;
+      background-color: #f0f0f0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .avatar-placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-size: 24px;
+        font-weight: bold;
+        color: #555;
+      }
     }
 
-    h3 {
-      margin: 0;
-      font-size: 16px;
+    .driver-name-rating {
+      .driver-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 0 4px;
+      }
+
+      .driver-rating {
+        font-size: 14px;
+        color: #777;
+
+        .star-icon {
+          color: #fbbc04;
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+
+  .driver-details {
+    margin-bottom: 20px;
+
+    p {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin: 8px 0;
+      color: #555;
+
+      .icon {
+        font-size: 16px;
+        margin-right: 8px;
+        color: #1a73e8;
+      }
+    }
+
+    .car-details {
       font-weight: bold;
-    }
-
-    p {
-      margin: 4px 0 0;
       font-size: 14px;
-      color: #666;
     }
   }
 
-  .car-details {
-    text-align: center;
+  .contact-driver-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a73e8;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 
-    p {
-      margin: 0;
-      font-size: 14px;
-      color: #333;
+    .icon {
+      font-size: 18px;
+      margin-right: 8px;
     }
-  }
 
-  .preferences {
-    text-align: right;
-
-    p {
-      margin: 4px 0 0;
-      font-size: 14px;
-      color: #666;
+    &:hover {
+      background-color: #1765cc;
     }
   }
 }

@@ -6,6 +6,7 @@ import Filters from "@/components/select-carpool/Filters/Filters";
 import FilterTabs from "@/components/select-carpool/FilterTabs/FilterTabs";
 import TripSummary from "@/components/select-carpool/TripSummary/TripSummary";
 import { useRouter } from "next/navigation";
+import "./Hero.scss";
 
 export default function Hero({ tabs }) {
   const router = useRouter();
