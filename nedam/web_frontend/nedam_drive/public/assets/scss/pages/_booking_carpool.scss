@@ -1,0 +1,25 @@
+.page-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Centre le conteneur principal */
+  align-items: flex-start; /* Aligne les colonnes en haut */
+  border: 2px solid rgb(170, 187, 76); /* Bordure temporaire pour vérifier l'application */
+}
+
+.left-column {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 2px dashed blue; /* Bordure temporaire */
+}
+
+.right-column {
+  flex: 1;
+  border: 2px dashed green; /* Bordure temporaire */
+  position: sticky;
+  top: 20px;
+}
